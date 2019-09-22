@@ -33,6 +33,8 @@ $(document).ready(function(){
         console.log(response);
       })
   
+    } else {
+      // Here we can put some sort of prompt asking the user to input a chicago zip
     }
   });
 });
