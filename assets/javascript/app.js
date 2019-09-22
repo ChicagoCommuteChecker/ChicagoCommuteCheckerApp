@@ -11,28 +11,23 @@ $(document).ready(function(){
       })
     })
 
-  // Note. We'll need to make the selector here match the html once it gets added.
+  // Note. We'll need to make the selector here match the html once it gets added, as well as the right thing where "#inputFormID" currently is.
   $("#submitButton").on("clickl", function(){
     
-    // var weatherQueryURL = "api.openweathermap.org/data/2.5/weather?zip=" + $("#inputFormID").val() + ",us&APIID=4df0823f371a314fac922d45729a9495";
-    var weatherQueryURL = "https://api.openweathermap.org/data/2.5/weather?zip=60091,us&apiid=4df0823f371a314fac922d45729a9495";
+    var weatherQueryURL = "https://api.openweathermap.org/data/2.5/weather?zip=" + $("#inputFormID").val() + ",us&APIID=4df0823f371a314fac922d45729a9495";
     $.ajax({
       url: weatherQueryURL,
+      method: "GET"
+    }).then(function(response) {
+      console.log(response);
+    })
+
+    var fiveDayQueryURL = "https://api.openweathermap.org/data/2.5/forecast?zip=" + $("#inputFormID").val() + ",us&appid=4df0823f371a314fac922d45729a9495";
+    $.ajax({
+      url: fiveDayQueryURL,
       method: "GET"
     }).then(function(response) {
       console.log(response);
     })
   })
-
-  function weatherTest() {
-    var weatherQueryURL = "https://api.openweathermap.org/data/2.5/weather?zip=60091,us&apiid=4df0823f371a314fac922d45729a9495";
-    $.ajax({
-      url: weatherQueryURL,
-      method: "GET"
-    }).then(function(response) {
-      console.log(response);
-    })
-  }
-
-  weatherTest();
 })
