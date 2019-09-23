@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
 
 
 
@@ -21,12 +22,36 @@
         <div  id="navbar" class="nav-wrapper">
             <img id="ctalogo" class="brand-logo" src="assets/images/CTAlogo.png">
             <ul class="right hide-on-med-and-down">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="badges.html">Components</a></li>
+                <li class="waves-effect waves-light modal-trigger" href="#modal1"><span id="instructions"> Instructions</span></li>
             </ul>
         </div>
     </nav>
 </div>
+
+<!-- modal content -->
+<div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4>How our App works</h4>
+          <br>
+          <br>
+          <br>
+            <ol start="1">
+                <li> 1. Enter your Zipcode (Chicago CTA Zipcodes only!)</li>
+                <br>
+                <br>
+                <li> 2. Select your Train</li>
+                <br>
+                <br>
+                <li id="italics"> 3. Relax! We're processing your commute conditions. </li>
+                <br>
+                <br>
+                <li> 4. The app will show you the current weather conditions & real-time CTA alerts for your commute!</li>
+            </ol>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Ok</a>
+        </div>
+      </div>
 
 <!-- Header -->
 <div class="slider">
@@ -53,7 +78,7 @@
             </div>
           </li>
           <li>
-            <img src="assets/images/chicago4.jpeg"> <!-- random image -->
+            <img src="assets/images/chicago5.jpg"> <!-- random image -->
             <div class="caption center-align">
               <h3>This is our big Tagline!</h3>
               <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
@@ -66,7 +91,7 @@
 <div class="input-field col s12">
 
       <select id="trainmenu" class="browser-default">
-        <option value="" disabled selected>Select your Train</option>
+        <option value="" disabled selected>Select Your Train</option>
         <option value="1"><span id="red">Red</span></option>
         <option value="2"><span id="blue">Blue</span></option>
         <option value="3"><span id="brn">Brown</span></option>
