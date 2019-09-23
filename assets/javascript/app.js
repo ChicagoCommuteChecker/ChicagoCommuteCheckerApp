@@ -20,7 +20,7 @@ $(document).ready(function(){
     console.log(zipCode);
     if(chicagoMetroZips.includes(zipCode)) {
       console.log("I'm in the array")
-      var weatherQueryURL = "https://api.openweathermap.org/data/2.5/weather?zip=" + zipCode + ",us&APIID=4df0823f371a314fac922d45729a9495";
+      var weatherQueryURL = "https://api.openweathermap.org/data/2.5/weather?zip=" + zipCode + ",us&appid=4df0823f371a314fac922d45729a9495";
       $.ajax({
         url: weatherQueryURL,
         method: "GET"
