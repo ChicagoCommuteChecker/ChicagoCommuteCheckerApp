@@ -5,9 +5,25 @@ var currentWeather;
 var futureWeather;
 var ctaInfo;
 
+
+<h2>Temperature Converter</h2>
+<p>Type a value in the Kelvin field to convert the value to Fahrenheit:</p>
+
+<p>
+  <label>Kelvin</label>
+  <input id="inputKelvin" type="number" placeholder="Kelvin" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+<p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+
+<script>
+function temperatureConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputFahrenheit").innerHTML=((valNum-273.15)*1.8)+32;
+}
+
 $(document).ready(function () {
-    
     $('.slider').slider();
+    $('.modal').modal();
     $('select').formSelect();
 
 });
