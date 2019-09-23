@@ -2,11 +2,6 @@ var chicagoMetroZips = ["60601","60602","60603","60604","60605","60606","60607",
 
 $(document).ready(function(){
 
-  $(".button").on("click", function() {
-
-
-    })
-
   // Note. We'll need to make the selector here match the html once it gets added, as well as the right thing where "#inputFormID" currently is.
   $("#submitButton").on("click", function(event){
     event.preventDefault();
