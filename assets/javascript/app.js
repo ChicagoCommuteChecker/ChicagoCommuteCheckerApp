@@ -18,8 +18,8 @@ function temperatureConverter(valNum) {
 }
 
 $(document).ready(function () {
-    
     $('.slider').slider();
+    $('.modal').modal();
     $('select').formSelect();
 
 });
