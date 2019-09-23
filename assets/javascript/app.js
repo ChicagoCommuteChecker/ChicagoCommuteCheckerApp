@@ -21,6 +21,15 @@ $(".button").on("click", function () {
 // Note. We'll need to make the selector here match the html once it gets added, as well as the right thing where "#inputFormID" currently is.
 $("#submitButton").on("click", function (event) {
     event.preventDefault();
+    var trainchoice = $("#trainmenu").val();
+    var queryURL = "https://cors-anywhere.herokuapp.com/https://www.transitchicago.com/api/1.0/routes.aspx?routeid=" +trainchoice +"&outputType=JSON";
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+      console.log(response);
+    })
+    
     var zipCode = $("#inputFormID").val().trim();
     console.log(zipCode);
     if (chicagoMetroZips.includes(zipCode)) {
