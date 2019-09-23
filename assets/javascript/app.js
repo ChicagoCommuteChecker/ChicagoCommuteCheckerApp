@@ -5,7 +5,6 @@ var currentWeather;
 var futureWeather;
 var ctaInfo;
 
-
 function temperatureConverter(valNum) {
   valNum = parseFloat(valNum);
   document.getElementById("outputFahrenheit").innerHTML=((valNum-273.15)*1.8)+32;
@@ -40,11 +39,12 @@ $("#submitButton").on("click", function (event) {
                 currentWeather = currentResponse;
                 console.log(currentWeather);
                 if (ctaInfo) {
-                    if ((badWeather.includes(currentWeather.weather[0].description)) || (currentWeather.main.temp > 273.15) || (ctaInfo.CTARoutes.RouteInfo.RouteStatus !== ("Planned Work" || "Normal Service"))) {
+                    if ((badWeather.includes(currentWeather.weather[0].description)) || (currentWeather.main.temp < 273.15) || (ctaInfo.CTARoutes.RouteInfo.RouteStatus !== ("Normal Service" || "Planned Service"))){
                         commuteRec = "Stay Home";
                     } else {
                         commuteRec = "Enjoy your commute";
                     } console.log(commuteRec);
+                    console.log(ctaInfo.CTARoutes.RouteInfo.RouteStatus);
                 }
             })
 
