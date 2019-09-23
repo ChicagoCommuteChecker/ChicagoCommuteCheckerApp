@@ -18,8 +18,8 @@
 
 <div class="navbar-fixed">
     <nav>
-        <div class="nav-wrapper">
-            <a href="#!" class="brand-logo">Logo</a>
+        <div  id="navbar" class="nav-wrapper">
+            <img id="ctalogo" class="brand-logo" src="assets/images/CTAlogo.png">
             <ul class="right hide-on-med-and-down">
                 <li><a href="sass.html">Sass</a></li>
                 <li><a href="badges.html">Components</a></li>
@@ -28,35 +28,60 @@
     </nav>
 </div>
 
-<!-- Card -->
-<div id="jumbotron" class="row">
-    <div class="col s12 m7">
-        <div class="card large">
-            <div class="card-image">
-                <img src="assets/images/ctabackground.jpg">
-                <span class="card-title">Chicago Commute Checker</span>
+<!-- Header -->
+<div class="slider">
+        <ul class="slides">
+          <li>
+            <img src="assets/images/ctabackground.jpg"> <!-- random image -->
+            <div class="caption center-align">
+              <h3>This is our big Tagline!</h3>
+              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
             </div>
-            <div class="card-content">
-                <p>Select your train line below.</p>
+          </li>
+          <li>
+            <img src="assets/images/chicago2.jpg"> <!-- random image -->
+            <div class="caption left-align">
+              <h3>Left Aligned Caption</h3>
+              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
             </div>
-        </div>
-    </div>
-</div>
-</div>
+          </li>
+          <li>
+            <img src="assets/images/chicago3.jpeg"> <!-- random image -->
+            <div class="caption right-align">
+              <h3>Right Aligned Caption</h3>
+              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            </div>
+          </li>
+          <li>
+            <img src="https://lorempixel.com/580/250/nature/4"> <!-- random image -->
+            <div class="caption center-align">
+              <h3>This is our big Tagline!</h3>
+              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+            </div>
+          </li>
+        </ul>
+      </div>
+          
 
+<div class="input-field col s12">
 
-<a id="red" class="waves-effect waves-light btn-large button">Red</a>
-<a id="blue" class="waves-effect waves-light btn-large button"><i class="material-icons left"></i>blue</a>
-<a id="brn" class="waves-effect waves-light btn-large button"><i class="material-icons right"></i>brown</a>
-<a id="g" class="waves-effect waves-light btn-large button"><i class="material-icons left"></i>green</a>
-<a id="org" class="waves-effect waves-light btn-large button"><i class="material-icons right"></i>orange</a>
-<a id="pink" class="waves-effect waves-light btn-large button"><i class="material-icons left"></i>pink</a>
-<a id="p" class="waves-effect waves-light btn-large button"><i class="material-icons right"></i>purple</a>
-<a id="y" class="waves-effect waves-light btn-large button"><i class="material-icons right"></i>yellow</a>
+      <select id="trainmenu"class="browser-default">
+        <option value="" disabled selected>Select your Train</option>
+        <option value="1"><span id="red">Red</span></option>
+        <option value="2"><span id="blue">Blue</span></option>
+        <option value="3"><span id="brn">Brown</span></option>
+        <option value="4"><span id="g">Green</span></option>
+        <option value="5"><span id="org">Orange</span></option>
+        <option value="6"><span id="pink">Pink</span></option>
+        <option value="7"><span id="p">Purple</span></option>
+        <option value="8"><span id="y">Yellow</span></option>
+      </select>
 
 <form>
+
     <input type="text" id="inputFormID">
     <button type="submit" id="submitButton">Submit</button>
+
 </form>
 
 <!-- Materalize JS -->

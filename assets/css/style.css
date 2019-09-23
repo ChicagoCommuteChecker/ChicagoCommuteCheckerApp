@@ -33,3 +33,18 @@
 #y {
     background: yellow
 }
+
+.nav-wrapper {
+    background: blue
+}
+
+#ctalogo {
+    height: 60px;
+    width: 60px
+}
+
+.card-image {
+    height: 1000%;
+    width: 100%;
+    overflow
+}
