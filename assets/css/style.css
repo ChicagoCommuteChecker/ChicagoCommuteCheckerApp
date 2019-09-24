@@ -1,5 +1,5 @@
-#jumbotron {
-    width: 2400px
+* {
+    font-family: 'Oswald', sans-serif;
 }
 
 #red {
@@ -40,10 +40,19 @@
 
 #ctalogo {
     height: 60px;
-    width: 60px
+    width: 60px;
+    margin-left: 15px
 }
 
 .card-image {
     height: 1000%;
     width: 100%;
+}
+
+#italics {
+    font-style: italic
+}
+
+#instructions {
+    margin-right: 50px
 }
