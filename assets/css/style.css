@@ -57,6 +57,7 @@
     margin-right: 50px
 }
 
+
 .test{
     margin:0 auto;
     width: 20%;
@@ -69,3 +70,17 @@
   text-align: center;
 }
 
+.page-footer {
+    background: blue
+
+}
+
+p {
+    font-style: italic
+}
+
+.btn {
+    width: 250px;
+    margin-bottom: 15px;
+    background: blue
+}
