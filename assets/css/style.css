@@ -63,6 +63,13 @@
     width: 20%;
 
 }
+
+.train-submit{
+  width: 30%;
+  margin: 0 35%;  
+  text-align: center;
+}
+
 .page-footer {
     background: blue
 
