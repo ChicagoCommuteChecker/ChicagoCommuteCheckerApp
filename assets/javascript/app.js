@@ -70,7 +70,7 @@ $("#submitButton").on("click", function (event) {
                         } else {
                             commuteFutureRec = "Commute's looking good.";
                         }
-                        $("#futureWeatherDisplay").append("<tr><td>" + displayTime + "</td><td>" + IFTemp + "</td><td>" + futureWeather.list[i].weather[0].description + "</td><td>" + commuteFutureRec + "</td></tr>")
+                        $("#futureWeatherDisplay").append("<tr><td>" + displayTime + "</td><td>" + IFTemp + " °F" + "</td><td>" + futureWeather.list[i].weather[0].description + "</td><td>" + commuteFutureRec + "</td></tr>")
                     } 
                     console.log(futureCommuteRecArray);
 
