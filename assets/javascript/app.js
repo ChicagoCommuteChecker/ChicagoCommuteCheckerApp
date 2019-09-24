@@ -8,7 +8,82 @@ var blueLineInfo = {
         zip: 60018,
         stationIDs: [30159,30160]
     },
-    
+    Cumberland: {
+        zip: 60631,
+        stationIDs: [30044,30045]
+    },
+    HarlemOHare: {
+        zip: 60656,
+        stationIDs: [30145,30146]
+    },
+    JeffersonPark: {
+        zip: 60630,
+        stationIDs: [30247,30248]
+    },
+    Montrose: {
+        zip: 60641,
+        stationIDs: [30259,30260]
+    },
+    IrvingPark: {
+        zip: 60613,
+        stationIDs: [30107,30108]
+    },
+    Addison: {
+        zip: 60618,
+        stationIDs: [30239,30240]
+    },
+    Belmont: {
+        zip: 60618,
+        stationIDs: [30012,30013]
+    },
+    LoganSquare: {
+        zip: 60647,
+        stationIDs: [30197,30198]
+    },
+    California: {
+        zip: 60647,
+        stationIDs: [30111,30112]
+    },
+    WesternOHare: {
+        zip: 60647,
+        stationIDs: [30129,30130]
+    },
+    Damen: {
+        zip: 60622,
+        stationIDs: [30115,30116]
+    },
+    Division: {
+        zip: 60622,
+        stationIDs: [30062,30063]
+    },
+    Chicago: {
+        zip: 60622,
+        stationIDs: [30271,30272]
+    },
+    Grand: {
+        zip: 60622,
+        stationIDs: [30095,30096]
+    },
+    ClarkLake: {
+        zip: 60601,
+        stationIDs: [30375,30374]
+    },
+    Washington: {
+        zip: 60602,
+        stationIDs: [30072,30073]
+    },
+    Monroe: {
+        zip: 60603,
+        stationIDs: [30153,30154]
+    },
+    Jackson: {
+        zip: 60604,
+        stationIDs: [30014,30015]
+    },
+    LaSalle: {
+        zip: 60605,
+        stationIDs: [30261,30262]
+    }
 }
 var badWeather = ["Rain", "Thunderstorm", "Snow", "Ash", "Squall", "Tornado"];
 var commuteRec;
