@@ -44,7 +44,7 @@ $("#submitButton").on("click", function (event) {
                 FTemp = temperatureConverter(currentWeather.main.temp);
                 if (ctaInfo) {
                     if ((badWeather.includes(currentWeather.weather[0].main)) || (FTemp < 32) || (ctaInfo.CTARoutes.RouteInfo.RouteStatus !== ("Normal Service" || "Planned Service"))){
-                        commuteRec = "Stay home.";
+                        commuteRec = "Work from home if you can.";
                     } else {
                         commuteRec = "Enjoy your commute.";
                     } console.log(commuteRec);
@@ -68,7 +68,14 @@ $("#submitButton").on("click", function (event) {
                             commuteFutureRec = "Commute's looking good.";
                             futureCommuteRecArray.push(commuteFutureRec);
                         } 
-                    } console.log(futureCommuteRecArray);
+                    } 
+                    console.log(futureCommuteRecArray);
+                    var currentWeatherBox = $("<div>");
+                    currentWeatherBox.append("Current Temp: " + FTemp);
+                    currentWeatherBox.append("Current Weather: " + currentWeather.weather[0].description);
+                    currentWeatherBox.append("Current CTA status for your train line: " + ctaInfo.CTARoutes.RouteInfo.RouteStatus);
+                    currentWeatherBox.append(commuteRec);
+                    $("#data-display").append(currentWeatherBox);
                 })
             })
         })
