@@ -12,6 +12,8 @@ function temperatureConverter(valNum) {
   valNum = parseFloat(valNum);
   FTempFloat = ((valNum-273.15)*1.8)+32;
   FTemp = parseInt(FTempFloat);
+// console.log(FTemp)
+//   return FTemp
 }
 
 $(document).ready(function () {
@@ -42,7 +44,7 @@ $("#submitButton").on("click", function (event) {
             }).then(function (currentResponse) {
                 currentWeather = currentResponse;
                 console.log(currentWeather);
-                FTemp = temperatureConverter(currentWeather.main.temp);
+                temperatureConverter(currentWeather.main.temp);
                 if (ctaInfo) {
                     if ((badWeather.includes(currentWeather.weather[0].main)) || (FTemp < 32) || (ctaInfo.CTARoutes.RouteInfo.RouteStatus !== ("Normal Service" || "Planned Service"))){
                         commuteRec = "Work from home if you can.";
@@ -71,12 +73,10 @@ $("#submitButton").on("click", function (event) {
                         } 
                     } 
                     console.log(futureCommuteRecArray);
-                    var currentWeatherBox = $("<div>");
-                    currentWeatherBox.append("<p>Current Temp: " + FTemp + "</p>");
-                    currentWeatherBox.append("<p>Current Weather: " + currentWeather.weather[0].description + "</p>");
-                    currentWeatherBox.append("<p>Current CTA status for your train line: " + ctaInfo.CTARoutes.RouteInfo.RouteStatus + "</p>")
-                    currentWeatherBox.append("<p>" + commuteRec + "</p>");
-                    $("#data-display").append(currentWeatherBox);
+
+                    $("#weatherInfo").append("<tr><td>" + FTemp +"</td><td>" + currentWeather.weather[0].description + "</td><td>" + ctaInfo.CTARoutes.RouteInfo.RouteStatus + "</td><td>" +
+                                  commuteRec + "</td></tr>");
+
                 })
             })
         })
