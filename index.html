@@ -2,122 +2,157 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Materialize CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
 
-    <title>Chicago Commute Checker</title>
+  <title>Chicago Commute Checker</title>
 
 </head>
 
 <div class="navbar-fixed">
-    <nav>
-        <div  id="navbar" class="nav-wrapper">
-            <img id="ctalogo" class="brand-logo" src="assets/images/CTAlogo.png">
-            <ul class="right hide-on-med-and-down">
-                <li class="waves-effect waves-light modal-trigger" href="#modal1"><span id="instructions"> Instructions</span></li>
-            </ul>
-        </div>
-    </nav>
+  <nav>
+    <div id="navbar" class="nav-wrapper">
+      <img id="ctalogo" class="brand-logo" src="assets/images/CTAlogo.png">
+      <ul class="right hide-on-med-and-down">
+        <li class="waves-effect waves-light modal-trigger" href="#modal1"><span id="instructions"> Instructions</span>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </div>
 
 <!-- modal content -->
 <div id="modal1" class="modal">
-        <div class="modal-content">
-          <h4>How our App works</h4>
-          <br>
-          <br>
-          <br>
-            <ol start="1">
-                <li> 1. Enter your Zipcode (Chicago CTA Zipcodes only!)</li>
-                <br>
-                <br>
-                <li> 2. Select your Train</li>
-                <br>
-                <br>
-                <li id="italics"> 3. Relax! We're processing your commute conditions. </li>
-                <br>
-                <br>
-                <li> 4. The app will show you the current weather conditions & real-time CTA alerts for your commute!</li>
-            </ol>
-        </div>
-        <div class="modal-footer">
-          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Ok</a>
-        </div>
-      </div>
+  <div class="modal-content">
+    <h4>How our App works</h4>
+    <br>
+    <br>
+    <br>
+    <ol start="1">
+      <li> 1. Enter your Zipcode (Chicago CTA Zipcodes only!)</li>
+      <br>
+      <br>
+      <li> 2. Select your Train</li>
+      <br>
+      <br>
+      <li id="italics"> 3. Relax! We're processing your commute conditions. </li>
+      <br>
+      <br>
+      <li> 4. The app will show you the current weather conditions & real-time CTA alerts for your commute!</li>
+    </ol>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Ok</a>
+  </div>
+</div>
 
 <!-- Header -->
 <div class="slider">
-        <ul class="slides">
-          <li>
-            <img src="assets/images/ctabackground.jpg"> <!-- random image -->
-            <div class="caption center-align">
-              <h3>This is our big Tagline!</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-            </div>
-          </li>
-          <li>
-            <img src="assets/images/chicago2.jpg"> <!-- random image -->
-            <div class="caption left-align">
-              <h3>Left Aligned Caption</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-            </div>
-          </li>
-          <li>
-            <img src="assets/images/chicago3.jpeg"> <!-- random image -->
-            <div class="caption right-align">
-              <h3>Right Aligned Caption</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-            </div>
-          </li>
-          <li>
-            <img src="assets/images/chicago5.jpg"> <!-- random image -->
-            <div class="caption center-align">
-              <h3>This is our big Tagline!</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-            </div>
-          </li>
-        </ul>
+  <ul class="slides">
+    <li>
+      <img src="assets/images/ctabackground.jpg"> <!-- random image -->
+      <div class="caption center-align">
+        <h3>This is our big Tagline!</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
       </div>
-          
+    </li>
+    <li>
+      <img src="assets/images/chicago2.jpg"> <!-- random image -->
+      <div class="caption left-align">
+        <h3>Left Aligned Caption</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      </div>
+    </li>
+    <li>
+      <img src="assets/images/chicago3.jpeg"> <!-- random image -->
+      <div class="caption right-align">
+        <h3>Right Aligned Caption</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      </div>
+    </li>
+    <li>
+      <img src="assets/images/chicago5.jpg"> <!-- random image -->
+      <div class="caption center-align">
+        <h3>This is our big Tagline!</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+
+<!--       <select id="trainmenu" class="browser-default test"> -->
 
 <div class="input-field col s12">
 
-      <select id="trainmenu" class="browser-default test">
 
-        <option value="" disabled selected>Select your Train</option>
-        <option value="red"><span id="red">Red</span></option>
-        <option value="blue"><span id="blue">Blue</span></option>
-        <option value="brn"><span id="brn">Brown</span></option>
-        <option value="g"><span id="g">Green</span></option>
-        <option value="org"><span id="org">Orange</span></option>
-        <option value="pink"><span id="pink">Pink</span></option>
-        <option value="p"><span id="p">Purple</span></option>
-        <option value="y"><span id="y">Yellow</span></option>
-      </select>
+  <select id="trainmenu" class="browser-default test">
 
-<form>
+    <option value="" disabled selected>Select your Train</option>
+    <option value="red" ><span id="red">Red</span></option>
+    <option value="blue"><span id="blue">Blue</span></option>
+    <option value="brn"><span id="brn">Brown</span></option>
+    <option value="g"><span id="g">Green</span></option>
+    <option value="org"><span id="org">Orange</span></option>
+    <option value="pink"><span id="pink">Pink</span></option>
+    <option value="p"><span id="p">Purple</span></option>
+    <option value="y"><span id="y">Yellow</span></option>
+  </select>
+  <form>
 
     <input type="text" id="inputFormID">
     <button type="submit" id="submitButton">Submit</button>
 
-</form>
+  </form>
+  <br>
+  <div id="data-display"></div>
 
-<div id="data-display"></div>
+  <footer class="page-footer">
+    <div class="container">
+        <i class="medium material-icons">directions_transit</i>
+      <div class="row">
 
-<!-- Materalize JS -->
-<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        <div class="col l0 s6">
+          <h5 class="white-text">Additional information</h5>
+  
+
+          <p class="grey-text text-lighten-2">For further information about transit cards, please refer to link.</p>
+        </div>
+        
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+
+          <a href="https://www.ventrachicago.com" target="_blank">Ventra Card</a>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2019 Coding bootcamp
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Materalize JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-<script src = "assets/javascript/app.js"></script>
-</body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <script src="assets/javascript/app.js"></script>
+  </body>
 
 </html>

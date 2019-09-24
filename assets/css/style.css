@@ -57,8 +57,13 @@
     margin-right: 50px
 }
 
+
 .test{
     margin:0 auto;
     width: 20%;
+
+}
+.page-footer {
+    background: blue
 
 }
