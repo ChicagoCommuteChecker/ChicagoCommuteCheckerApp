@@ -111,7 +111,10 @@
   <form>
 
     <input type="text" id="inputFormID">
-    <button type="submit" id="submitButton">Submit</button>
+    <button type="submit" class="btn waves-effect waves-light" id="submitButton" name="action">Submit
+            <i class="material-icons right">send</i>
+    </button>
+
 
   </form>
   <br>
@@ -133,6 +136,32 @@
 
 
 
+  <!-- Modal Trigger -->
+  <a id="footerModal" class="waves-effect waves-light btn modal-trigger" href="#modal2">Weekly forecast
+      <i class="material-icons right">wb_cloudy</i>
+  </a>
+
+  <!-- Modal Structure -->
+  <div id="modal2" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4> Weekly forecast </h4>
+        <p>at-a-glance</p>
+        <table class="responsive-table striped">
+            <thead>
+                <tr>
+                    <th>Temperature</th>
+                    <th>Weather Type</th>
+                    <tbody id="#">
+                        <!--  -->
+                    </tbody>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
 
 
 

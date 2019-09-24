@@ -74,7 +74,7 @@ $("#submitButton").on("click", function (event) {
                     } 
                     console.log(futureCommuteRecArray);
 
-                    $("#weatherInfo").append("<tr><td>" + FTemp +"</td><td>" + currentWeather.weather[0].description + "</td><td>" + ctaInfo.CTARoutes.RouteInfo.RouteStatus + "</td><td>" +
+                    $("#weatherInfo").append("<tr><td>" + FTemp + " °F" + "</td><td>" + currentWeather.weather[0].description + "</td><td>" + ctaInfo.CTARoutes.RouteInfo.RouteStatus + "</td><td>" +
                                   commuteRec + "</td></tr>");
 
                 })
