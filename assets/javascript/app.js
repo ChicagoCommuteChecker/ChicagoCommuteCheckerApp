@@ -5,13 +5,13 @@ var currentWeather;
 var futureWeather;
 var ctaInfo;
 var FTemp;
-var futureCommuteRecArray = [];
+var IFTemp;
 
 //Based on converter found on w3schools
 function temperatureConverter(valNum) {
   valNum = parseFloat(valNum);
   FTempFloat = ((valNum-273.15)*1.8)+32;
-  FTemp = parseInt(FTempFloat);
+  return parseInt(FTempFloat);
 // console.log(FTemp)
 //   return FTemp
 }
@@ -44,7 +44,7 @@ $("#submitButton").on("click", function (event) {
             }).then(function (currentResponse) {
                 currentWeather = currentResponse;
                 console.log(currentWeather);
-                temperatureConverter(currentWeather.main.temp);
+                FTemp = temperatureConverter(currentWeather.main.temp);
                 if (ctaInfo) {
                     if ((badWeather.includes(currentWeather.weather[0].main)) || (FTemp < 32) || (ctaInfo.CTARoutes.RouteInfo.RouteStatus !== ("Normal Service" || "Planned Service"))){
                         commuteRec = "Work from home if you can.";
@@ -63,14 +63,14 @@ $("#submitButton").on("click", function (event) {
                     console.log(futureWeather);
                     futureCommuteRecArray = [];
                     for (var i = 0; i < futureWeather.list.length; i++) {
-                        var IFTemp = temperatureConverter(futureWeather.list[i].main.temp);
+                        IFTemp = temperatureConverter(futureWeather.list[i].main.temp);
+                        var displayTime = moment(futureWeather.list[i].dt_txt).format("MMMM Do YYYY, h:mm:ss a");
                         if ((badWeather.includes(futureWeather.list[i].weather[0].main)) || (IFTemp < 32)) {
                             commuteFutureRec = "Probably work from home.";
-                            futureCommuteRecArray.push(commuteFutureRec);
                         } else {
                             commuteFutureRec = "Commute's looking good.";
-                            futureCommuteRecArray.push(commuteFutureRec);
-                        } 
+                        }
+                        $("#futureWeatherDisplay").append("<tr><td>" + displayTime + "</td><td>" + IFTemp + "</td><td>" + futureWeather.list[i].weather[0].description + "</td><td>" + commuteFutureRec + "</td></tr>")
                     } 
                     console.log(futureCommuteRecArray);
 
