@@ -7,10 +7,11 @@ var ctaInfo;
 var FTemp;
 var futureCommuteRecArray = [];
 
-//Inspired by converter found on w3schools
+//Based on converter found on w3schools
 function temperatureConverter(valNum) {
   valNum = parseFloat(valNum);
-  FTemp = ((valNum-273.15)*1.8)+32;
+  FTempFloat = ((valNum-273.15)*1.8)+32;
+  FTemp = parseInt(FTempFloat);
 }
 
 $(document).ready(function () {
@@ -71,10 +72,10 @@ $("#submitButton").on("click", function (event) {
                     } 
                     console.log(futureCommuteRecArray);
                     var currentWeatherBox = $("<div>");
-                    currentWeatherBox.append("Current Temp: " + FTemp);
-                    currentWeatherBox.append("Current Weather: " + currentWeather.weather[0].description);
-                    currentWeatherBox.append("Current CTA status for your train line: " + ctaInfo.CTARoutes.RouteInfo.RouteStatus);
-                    currentWeatherBox.append(commuteRec);
+                    currentWeatherBox.append("<p>Current Temp: " + FTemp + "</p>");
+                    currentWeatherBox.append("<p>Current Weather: " + currentWeather.weather[0].description + "</p>");
+                    currentWeatherBox.append("<p>Current CTA status for your train line: " + ctaInfo.CTARoutes.RouteInfo.RouteStatus + "</p>")
+                    currentWeatherBox.append("<p>" + commuteRec + "</p>");
                     $("#data-display").append(currentWeatherBox);
                 })
             })
