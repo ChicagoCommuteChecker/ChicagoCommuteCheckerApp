@@ -67,3 +67,13 @@
     background: blue
 
 }
+
+p {
+    font-style: italic
+}
+
+.btn {
+    width: 250px;
+    margin-bottom: 15px;
+    background: blue
+}
