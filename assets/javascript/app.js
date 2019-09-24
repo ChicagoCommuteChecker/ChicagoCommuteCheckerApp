@@ -58,10 +58,7 @@ $("#submitButton").on("click", function (event) {
                 }).then(function (futureResponse) {
                     futureWeather = futureResponse;
                     console.log(futureWeather);
-<<<<<<< HEAD
-=======
                     futureCommuteRecArray = [];
->>>>>>> commuteRec
                     for (var i = 0; i < futureWeather.list.length; i++) {
                         var IFTemp = temperatureConverter(futureWeather.list[i].main.temp);
                         if ((badWeather.includes(futureWeather.list[i].weather[0].main)) || (IFTemp < 32)) {
