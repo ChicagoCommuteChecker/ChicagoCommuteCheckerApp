@@ -83,6 +83,54 @@ var blueLineInfo = {
     LaSalle: {
         zip: 60605,
         stationIDs: [30261,30262]
+    },
+    Clinton: {
+        zip: 60607,
+        stationIDs: [30084,30085]
+    },
+    UICHalsted: {
+        zip: 60607,
+        stationIDs: [30068,30069]
+    },
+    Racine: {
+        zip: 60607,
+        stationIDs: [30092,30093]
+    },
+    IllMedDistrict: {
+        zip: 60612,
+        stationIDs: [30157,30158]
+    },
+    WesternForestPark: {
+        zip: 60612,
+        stationIDs: [30042,30043]
+    },
+    KedzieHoman: {
+        zip: 60612,
+        stationIDs: [30048,30049]
+    },
+    Pulaski: {
+        zip: 60612,
+        stationIDs: [30179,30180]
+    },
+    Cicero: {
+        zip: 60644,
+        stationIDs: [30187,30188]
+    },
+    Austin: {
+        zip: 60304,
+        stationIDs: [30001,30002]
+    },
+    OakPark: {
+        zip: 60304,
+        stationIDs: [30034,30035]
+    },
+    HarlemForestPark: {
+        zip: 60130,
+        stationIDs: [30189,30190]
+    },
+    ForestPark: {
+        zip: 60130,
+        stationIDs: [30076,30077]
     }
 }
 var badWeather = ["Rain", "Thunderstorm", "Snow", "Ash", "Squall", "Tornado"];
