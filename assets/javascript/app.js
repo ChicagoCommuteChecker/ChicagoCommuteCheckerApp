@@ -100,7 +100,7 @@ function apiAndTextMaker() {
         // Here we can put some sort of prompt asking the user to input a chicago zip
     }
 }
-var stationURL = "https://cors-anywhere.herokuapp.com/https://www.transitchicago.com/api/1.0/routes.aspx?stationid=40930&outputType=JSON";
+var stationURL = "https://cors-anywhere.herokuapp.com/http://lapi.transitchicago.com/api/1.0/routes.aspx?stationid=40890&outputType=JSON";
 console.log(stationURL);
 $.ajax({
   url: stationURL,
