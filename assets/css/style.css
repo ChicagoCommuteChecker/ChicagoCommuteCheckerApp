@@ -50,12 +50,11 @@ p {
 .btn {
     width: 250px;
     margin-bottom: 15px;
+    margin-top: 15px;
     background: blue
 }
 
-#modal3 {
 
-}
 /* .train-table{
     background-color:blue;
 } */
@@ -73,3 +72,18 @@ p {
     background-color: blue;
     color: white
  } */
+
+ #inputFormID {
+     text-align: center;
+     margin: 0 auto;
+ }
+
+ #footerModal {
+     margin-left: 41.25%
+ }
+
+ #glance {
+    font-style: italic;
+     margin-top: 15px;
+     margin-bottom: 15px
+ }

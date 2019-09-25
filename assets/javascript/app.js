@@ -84,7 +84,8 @@ $("#submitButton").on("click", function (event) {
         
 
     } else {
-       
+        $("#inputFormID").val("");
+       $("#inputFormID").attr("placeholder", "Please enter a valid CTA Zipcode")
         // console.log("I'm not in the array.")
         // Here we can put some sort of prompt asking the user to input a chicago zip
     }
