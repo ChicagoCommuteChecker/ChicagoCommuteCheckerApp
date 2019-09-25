@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
 
@@ -98,7 +99,7 @@
 
   <select id="trainmenu" class="browser-default test">
 
-    <option value="" disabled selected>Select your Train</option>
+    <option value="" disabled selected>Select your Train Line</option>
     <option value="red" ><span id="red">Red</span></option>
     <option value="blue"><span id="blue">Blue</span></option>
     <option value="brn"><span id="brn">Brown</span></option>
@@ -111,7 +112,8 @@
   
   <form class="train-submit">
 
-    <input type="text" id="inputFormID">
+    <input type="text" id="inputFormID" placeholder="Enter your 5 digit Zip Code here">
+    
     <button type="submit" class="btn waves-effect waves-light" id="submitButton" name="action">Submit
             <i class="material-icons right">send</i>
     </button>
@@ -124,6 +126,13 @@
 
   <table class="responsive-table striped">
         <thead>
+            <div class="stsign">
+            <div class="w3-tag w3-round w3-red" style="padding:10px">
+                <div class="w3-tag w3-round w3-blue w3-border w3-border-white">
+                  Transit & Weather information
+                </div>
+              </div>
+            </div>
           <tr>
               <th>Current Temperature</th>
               <th>Current Weather</th>
@@ -174,10 +183,10 @@
       <div class="row">
 
         <div class="col l0 s6">
-          <h5 class="white-text">Additional information</h5>
+          <h5 class="white-text">Transit information</h5>
   
 
-          <p class="grey-text text-lighten-2">For further information about transit cards, please refer to link.</p>
+          <p class="grey-text text-lighten-2">For further information, please refer to links.</p>
         </div>
         
         <div class="col l4 offset-l2 s12">

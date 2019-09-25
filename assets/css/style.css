@@ -2,38 +2,6 @@
     font-family: 'Oswald', sans-serif;
 }
 
-#red {
-    background: red
-}
-
-#blue {
-    background: blue
-}
-
-#brn {
-    background: brown
-}
-
-#g {
-    background: green
-}
-
-#org {
-    background: orange
-}
-
-#pink {
-    background: pink
-}
-
-#p {
-    background: purple
-}
-
-#y {
-    background: yellow
-}
-
 .nav-wrapper {
     background: blue
 }
@@ -83,4 +51,10 @@ p {
     width: 250px;
     margin-bottom: 15px;
     background: blue
+}
+
+.stsign {
+    text-align: center;
+    font-size: 20px;
+
 }
