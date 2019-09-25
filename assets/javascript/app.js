@@ -7,6 +7,7 @@ var ctaInfo;
 var FTemp;
 var IFTemp;
 var zipCode;
+var trainchoice;
 
 //Based on converter found on w3schools
 function temperatureConverter(valNum) {
@@ -30,22 +31,21 @@ $(".submitButton").on("click", function (event) {
     var whichButton = ($(this).attr("id"));
     if (whichButton === "standardSubmit") {
         zipCode = $("#inputFormID").val().trim();
+        trainchoice = $("#trainmenu").val();
         console.log(zipCode);
         apiAndTextMaker();
     } else {
         var station = $("#stationmenu").val().toString();
-        console.log(station);
-        // apiAndTextMaker();
+        zipCode = blueLineInfo[station].zip;
+        trainchoice = "blue";
+        apiAndTextMaker();
     }
-
-
-
 });
 
 function apiAndTextMaker() {
     if (chicagoMetroZips.includes(zipCode)) {
-        var trainchoice = $("#trainmenu").val();
         var queryURL = "https://cors-anywhere.herokuapp.com/https://www.transitchicago.com/api/1.0/routes.aspx?routeid=" +trainchoice +"&outputType=JSON";
+        console.log(queryURL);
         $.ajax({
           url: queryURL,
           method: "GET"
@@ -89,7 +89,6 @@ function apiAndTextMaker() {
 
                     $("#weatherInfo").append("<tr><td>" + FTemp + " °F" + "</td><td>" + currentWeather.weather[0].description + "</td><td>" + ctaInfo.CTARoutes.RouteInfo.RouteStatus + "</td><td>" +
                                   commuteRec + "</td></tr>");
-
                 })
             })
         })
@@ -101,3 +100,12 @@ function apiAndTextMaker() {
         // Here we can put some sort of prompt asking the user to input a chicago zip
     }
 }
+var stationURL = "https://cors-anywhere.herokuapp.com/https://www.transitchicago.com/api/1.0/routes.aspx?stationid=40930&outputType=JSON";
+console.log(stationURL);
+$.ajax({
+  url: stationURL,
+  method: "GET"
+}).then(function(stationresponse) {
+  stationInfo = stationresponse;
+  console.log(stationInfo);
+});

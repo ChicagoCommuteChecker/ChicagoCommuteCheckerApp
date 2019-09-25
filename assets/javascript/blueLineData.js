@@ -1,7 +1,7 @@
 var blueLineInfo = {
     OHare: {
         zip: "60666",
-        stationIDs: [30171.30172],
+        stationIDs: [30171,30172],
         ada: "accessible"
     },
     Rosemont: {
