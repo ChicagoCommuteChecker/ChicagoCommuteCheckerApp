@@ -37,7 +37,7 @@ $(".submitButton").on("click", function (event) {
     } else {
         var station = $("#stationmenu").val().toString();
         zipCode = blueLineInfo[station].zip;
-        trainchoice = "blue";
+        stationIDValue = blueLineInfo[station].stationID;
         apiAndTextMaker();
     }
 });
@@ -100,7 +100,7 @@ function apiAndTextMaker() {
         // Here we can put some sort of prompt asking the user to input a chicago zip
     }
 }
-var stationURL = "https://cors-anywhere.herokuapp.com/http://lapi.transitchicago.com/api/1.0/routes.aspx?stationid=40890&outputType=JSON";
+var stationURL = "https://cors-anywhere.herokuapp.com/lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=09bd2e03a4db48288d53fab3fafbea81&mapid=40380&outputType=JSON";
 console.log(stationURL);
 $.ajax({
   url: stationURL,
