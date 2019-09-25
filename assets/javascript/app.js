@@ -84,7 +84,8 @@ $("#submitButton").on("click", function (event) {
         
 
     } else {
-        console.log("I'm not in the array.")
+       
+        // console.log("I'm not in the array.")
         // Here we can put some sort of prompt asking the user to input a chicago zip
     }
 
