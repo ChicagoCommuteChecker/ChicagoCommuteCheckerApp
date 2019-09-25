@@ -1,3 +1,5 @@
+// The object below contains data for the Blue Line related to a feature currently in development which will allow users to select a specific station they use.
+
 var blueLineInfo = {
     OHare: {
         zip: 60666,
