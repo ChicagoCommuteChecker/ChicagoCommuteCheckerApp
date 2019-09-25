@@ -8,10 +8,10 @@
   <link rel="stylesheet" href="assets/css/reset.css">
   <!-- Materialize CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
 
@@ -42,7 +42,7 @@
       <li> 1. Enter your Zipcode (Chicago CTA Zipcodes only!)</li>
       <br>
       <br>
-      <li> 2. Select your Train</li>
+      <li> 2. Select your Train Line.</li>
       <br>
       <br>
       <li id="italics"> 3. Relax! We're processing your commute conditions. </li>
@@ -88,14 +88,12 @@
 
 
 
-<!--       <select id="trainmenu" class="browser-default test"> -->
-
 <div class="input-field col s12">
 
 
   <select id="trainmenu" class="browser-default test">
 
-    <option value="" disabled selected>Select your Train Line</option>
+    <option value="" disabled selected>Select Train</option>
     <option value="red" ><span id="red">Red</span></option>
     <option value="blue"><span id="blue">Blue</span></option>
     <option value="brn"><span id="brn">Brown</span></option>
@@ -108,8 +106,7 @@
   
   <form class="train-submit">
 
-    <input type="text" id="inputFormID" placeholder="Enter your 5 digit Zip Code here">
-    
+    <input type="text" id="inputFormID">
     <button type="submit" class="btn waves-effect waves-light" id="submitButton" name="action">Submit
             <i class="material-icons right">send</i>
     </button>
@@ -121,18 +118,14 @@
  
 
   <table class="responsive-table striped">
-
-        <thead>
-            <div class="stsign">
-            <div class="w3-tag w3-round w3-red" style="padding:10px">
-                <div class="w3-tag w3-round w3-blue w3-border w3-border-white">
-                  Transit & Weather information
+        <div id="stsign">
+                <div class="w3-tag w3-round w3-red" style="padding:3px">
+                    <div class="w3-tag w3-round w3-blue w3-border w3-border-white">
+                      Transit & Weather information
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-
         <thead class="train-table">
-
           <tr>
               <th>CURRENT TEMPERATURE</th>
               <th>CURRENT WEATHER</th>
@@ -146,6 +139,7 @@
         </tbody>
       </table>
 
+
   <!-- Modal Trigger -->
   <a id="footerModal" class="waves-effect waves-light btn modal-trigger" href="#modal2">Weekly forecast
       <i class="material-icons right">wb_cloudy</i>
@@ -154,10 +148,9 @@
   <!-- Modal Structure -->
   <div id="modal2" class="modal bottom-sheet">
     <div class="modal-content">
-      <h4> Weekly forecast </h4>
-        <p>at-a-glance</p>
+      <h4> Weekly forecast: <span id="glance">at-a-glance</span> </h4>
         <table class="responsive-table striped">
-            <thead>
+            <thead class="train-table">
                 <tr>
                         <th>Date & Time</th>
                         <th>Temp</th>
@@ -170,9 +163,6 @@
             </thead>
         </table>
     </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
   </div>
 
 
@@ -183,10 +173,10 @@
       <div class="row">
 
         <div class="col l0 s6">
-          <h5 class="white-text">Transit information</h5>
+          <h5 class="white-text">Additional information</h5>
   
 
-          <p class="grey-text text-lighten-2">For further information, please refer to links.</p>
+          <p class="grey-text text-lighten-2">For further information about transit cards, please refer to link.</p>
         </div>
         
         <div class="col l4 offset-l2 s12">
@@ -196,10 +186,23 @@
           <br>
           <a href="https:www.transitchicago.com/" target="_blank">Transit Chicago</a>
 
-
         </div>
       </div>
     </div>
+
+         <!-- Alert Modal (hidden)-->
+    <!-- <a id="alertButton" class="waves-effect waves-light btn modal-trigger" href="#modal3">Modal</a> -->
+
+ <div id="modal3" class="modal">
+        <div class="modal-content">
+          <h4>Modal Header</h4>
+          <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+          <a href="index.html" class="modal-close waves-effect waves-green btn-flat">OK</a>
+        </div>
+      </div>
+     
     <div class="footer-copyright">
       <div class="container">
         © 2019 Coding bootcamp

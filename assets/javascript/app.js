@@ -62,6 +62,7 @@ $("#submitButton").on("click", function (event) {
                     futureWeather = futureResponse;
                     console.log(futureWeather);
                     futureCommuteRecArray = [];
+                    $("#futureWeatherDisplay").empty();
                     for (var i = 0; i < futureWeather.list.length; i++) {
                         IFTemp = temperatureConverter(futureWeather.list[i].main.temp);
                         var displayTime = moment(futureWeather.list[i].dt_txt).format("MMMM Do YYYY, h:mm:ss a");
@@ -73,7 +74,7 @@ $("#submitButton").on("click", function (event) {
                         $("#futureWeatherDisplay").append("<tr><td>" + displayTime + "</td><td>" + IFTemp + " °F" + "</td><td>" + futureWeather.list[i].weather[0].description + "</td><td>" + commuteFutureRec + "</td></tr>")
                     } 
                     console.log(futureCommuteRecArray);
-
+                    $("#weatherInfo").empty();
                     $("#weatherInfo").append("<tr><td>" + FTemp + " °F" + "</td><td>" + currentWeather.weather[0].description + "</td><td>" + ctaInfo.CTARoutes.RouteInfo.RouteStatus + "</td><td>" +
                                   commuteRec + "</td></tr>");
 
@@ -84,7 +85,9 @@ $("#submitButton").on("click", function (event) {
         
 
     } else {
-        console.log("I'm not in the array.")
+        $("#inputFormID").val("");
+       $("#inputFormID").attr("placeholder", "Please enter a valid CTA Zipcode")
+        // console.log("I'm not in the array.")
         // Here we can put some sort of prompt asking the user to input a chicago zip
     }
 
