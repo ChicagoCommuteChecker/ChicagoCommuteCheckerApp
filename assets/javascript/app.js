@@ -6,6 +6,7 @@ var futureWeather;
 var ctaInfo;
 var FTemp;
 var IFTemp;
+var zipCode;
 
 //Based on converter found on w3schools
 function temperatureConverter(valNum) {
@@ -25,9 +26,23 @@ $(document).ready(function () {
 
 $(".submitButton").on("click", function (event) {
     event.preventDefault();
-    
-    var zipCode = $("#inputFormID").val().trim();
-    console.log(zipCode);
+    console.log(this);
+    var whichButton = ($(this).attr("id"));
+    if (whichButton === "standardSubmit") {
+        zipCode = $("#inputFormID").val().trim();
+        console.log(zipCode);
+        apiAndTextMaker();
+    } else {
+        var station = $("#stationmenu").val().toString();
+        console.log(station);
+        // apiAndTextMaker();
+    }
+
+
+
+});
+
+function apiAndTextMaker() {
     if (chicagoMetroZips.includes(zipCode)) {
         var trainchoice = $("#trainmenu").val();
         var queryURL = "https://cors-anywhere.herokuapp.com/https://www.transitchicago.com/api/1.0/routes.aspx?routeid=" +trainchoice +"&outputType=JSON";
@@ -61,7 +76,6 @@ $(".submitButton").on("click", function (event) {
                 }).then(function (futureResponse) {
                     futureWeather = futureResponse;
                     console.log(futureWeather);
-                    futureCommuteRecArray = [];
                     for (var i = 0; i < futureWeather.list.length; i++) {
                         IFTemp = temperatureConverter(futureWeather.list[i].main.temp);
                         var displayTime = moment(futureWeather.list[i].dt_txt).format("MMMM Do YYYY, h:mm:ss a");
@@ -71,8 +85,7 @@ $(".submitButton").on("click", function (event) {
                             commuteFutureRec = "Commute's looking good.";
                         }
                         $("#futureWeatherDisplay").append("<tr><td>" + displayTime + "</td><td>" + IFTemp + " °F" + "</td><td>" + futureWeather.list[i].weather[0].description + "</td><td>" + commuteFutureRec + "</td></tr>")
-                    } 
-                    console.log(futureCommuteRecArray);
+                    }
 
                     $("#weatherInfo").append("<tr><td>" + FTemp + " °F" + "</td><td>" + currentWeather.weather[0].description + "</td><td>" + ctaInfo.CTARoutes.RouteInfo.RouteStatus + "</td><td>" +
                                   commuteRec + "</td></tr>");
@@ -87,5 +100,4 @@ $(".submitButton").on("click", function (event) {
         console.log("I'm not in the array.")
         // Here we can put some sort of prompt asking the user to input a chicago zip
     }
-
-});
+}
