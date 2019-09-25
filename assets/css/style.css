@@ -84,3 +84,21 @@ p {
     margin-bottom: 15px;
     background: blue
 }
+
+/* .train-table{
+    background-color:blue;
+} */
+
+
+/* without background with a bigger font*/
+.train-table {
+   font-weight: bolder;
+   font-size: 1.2em;
+   border-bottom: 2px solid black;
+}
+
+/* with background */
+/* .train-table {
+    background-color: blue;
+    color: white
+ } */
