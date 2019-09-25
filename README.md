@@ -4,7 +4,7 @@ We created a Web Application to help Chicago commuters figure out what their com
 
 This project utilized three different APIs: Current Weather Data, 5 Day Forecast, & CTA Customer Alerts
 
-![Screenshot of our Web App](Project.png)
+![Screenshot of our Web App](./assets/images/project.png)
 
 How our App works
 
