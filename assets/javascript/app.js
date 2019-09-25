@@ -23,7 +23,7 @@ $(document).ready(function () {
 
 });
 
-$("#submitButton").on("click", function (event) {
+$(".submitButton").on("click", function (event) {
     event.preventDefault();
     
     var zipCode = $("#inputFormID").val().trim();
