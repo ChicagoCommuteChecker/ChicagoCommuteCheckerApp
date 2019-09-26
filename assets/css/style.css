@@ -2,38 +2,6 @@
     font-family: 'Oswald', sans-serif;
 }
 
-#red {
-    background: red
-}
-
-#blue {
-    background: blue
-}
-
-#brn {
-    background: brown
-}
-
-#g {
-    background: green
-}
-
-#org {
-    background: orange
-}
-
-#pink {
-    background: pink
-}
-
-#p {
-    background: purple
-}
-
-#y {
-    background: yellow
-}
-
 .nav-wrapper {
     background: blue
 }
@@ -82,5 +50,49 @@ p {
 .btn {
     width: 250px;
     margin-bottom: 15px;
+    margin-top: 15px;
     background: blue
 }
+
+
+/* .train-table{
+    background-color:blue;
+} */
+
+
+/* without background with a bigger font*/
+.train-table {
+   font-weight: bolder;
+   font-size: 1.2em;
+   border-bottom: 2px solid black;
+}
+
+/* with background */
+/* .train-table {
+    background-color: blue;
+    color: white
+ } */
+
+
+ #inputFormID {
+     text-align: center;
+     margin: 0 auto;
+ }
+
+ #footerModal {
+     margin-left: 41.25%
+ }
+
+ #glance {
+    font-style: italic;
+     margin-top: 15px;
+     margin-bottom: 15px
+ }
+
+ #stsign {
+    font-size: 20px;
+ }
+
+ h4 {
+     font: bolder
+ }

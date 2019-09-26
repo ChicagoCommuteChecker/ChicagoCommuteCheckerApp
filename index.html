@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="assets/css/reset.css">
   <!-- Materialize CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -41,7 +42,7 @@
       <li> 1. Enter your Zipcode (Chicago CTA Zipcodes only!)</li>
       <br>
       <br>
-      <li> 2. Select your Train</li>
+      <li> 2. Select your Train Line.</li>
       <br>
       <br>
       <li id="italics"> 3. Relax! We're processing your commute conditions. </li>
@@ -60,30 +61,26 @@
   <ul class="slides">
     <li>
       <img src="assets/images/ctabackground.jpg"> <!-- random image -->
-      <div class="caption center-align">
-        <h3>This is our big Tagline!</h3>
-        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      <div class="caption left-align">
+        <h3>Chicago Commute Checker</h3>
       </div>
     </li>
     <li>
       <img src="assets/images/chicago2.jpg"> <!-- random image -->
-      <div class="caption left-align">
-        <h3>Left Aligned Caption</h3>
-        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      <div class="caption right-align">
+        <h3>Pick a train line and enter a zip code.</h3>
       </div>
     </li>
     <li>
       <img src="assets/images/chicago3.jpeg"> <!-- random image -->
       <div class="caption right-align">
-        <h3>Right Aligned Caption</h3>
-        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        <h3>Get up-to-date weather and train alerts.</h3>
       </div>
     </li>
     <li>
       <img src="assets/images/chicago5.jpg"> <!-- random image -->
       <div class="caption center-align">
-        <h3>This is our big Tagline!</h3>
-        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        <h3>We'll tell you if you should stay home in your pj's.</h3>
       </div>
     </li>
   </ul>
@@ -91,14 +88,12 @@
 
 
 
-<!--       <select id="trainmenu" class="browser-default test"> -->
-
 <div class="input-field col s12">
 
 
   <select id="trainmenu" class="browser-default test">
 
-    <option value="" disabled selected>Select your Train</option>
+    <option value="" disabled selected>Select your Train Line</option>
     <option value="red" ><span id="red">Red</span></option>
     <option value="blue"><span id="blue">Blue</span></option>
     <option value="brn"><span id="brn">Brown</span></option>
@@ -111,8 +106,13 @@
   
   <form class="train-submit">
 
+<<<<<<< HEAD
     <input type="text" id="inputFormID">
     <button type="submit" class="btn waves-effect waves-light submitButton" id="standardSubmit" name="action">Submit
+=======
+    <input type="text" id="inputFormID" placeholder="Enter your 5 digit Zip Code here">
+    <button type="submit" class="btn waves-effect waves-light" id="submitButton" name="action">Submit
+>>>>>>> master
             <i class="material-icons right">send</i>
     </button>
 
@@ -166,12 +166,19 @@
  
 
   <table class="responsive-table striped">
-        <thead>
-          <tr id="headerRow">
-              <th>Current Temperature</th>
-              <th>Current Weather</th>
-              <th>Line Status</th>
-              <th>Commute Recommendation</th>
+        <div id="stsign">
+                <div class="w3-tag w3-round w3-red" style="padding:3px">
+                    <div class="w3-tag w3-round w3-blue w3-border w3-border-white">
+                      Transit & Weather information
+                    </div>
+                  </div>
+                </div>
+        <thead class="train-table">
+          <tr>
+              <th>CURRENT TEMPERATURE</th>
+              <th>CURRENT WEATHER</th>
+              <th>TRAIN STATUS</th>
+              <th>COMMUTE RECOMMENDATION</th>
           </tr>
         </thead>
 
@@ -179,6 +186,7 @@
             <!-- Weather Data feeds here -->
         </tbody>
       </table>
+
 
   <!-- Modal Trigger -->
   <a id="footerModal" class="waves-effect waves-light btn modal-trigger" href="#modal2">Weekly forecast
@@ -188,10 +196,9 @@
   <!-- Modal Structure -->
   <div id="modal2" class="modal bottom-sheet">
     <div class="modal-content">
-      <h4> Weekly forecast </h4>
-        <p>at-a-glance</p>
+      <h4> Weekly forecast: <span id="glance">at-a-glance</span> </h4>
         <table class="responsive-table striped">
-            <thead>
+            <thead class="train-table">
                 <tr>
                         <th>Date & Time</th>
                         <th>Temp</th>
@@ -204,9 +211,6 @@
             </thead>
         </table>
     </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
   </div>
 
 
@@ -217,10 +221,10 @@
       <div class="row">
 
         <div class="col l0 s6">
-          <h5 class="white-text">Additional information</h5>
+          <h5 class="white-text">Transit information</h5>
   
 
-          <p class="grey-text text-lighten-2">For further information about transit cards, please refer to link.</p>
+          <p class="grey-text text-lighten-2">For further information, please refer to links.</p>
         </div>
         
         <div class="col l4 offset-l2 s12">
@@ -228,12 +232,12 @@
 
           <a href="https://www.ventrachicago.com" target="_blank">Ventra Card</a>
           <br>
-          <a href="https:www.transitchicago.com/" target="_blank">Transit Chicago</a>
-
+          <a href="https://www.transitchicago.com" target="_blank">Transit Chicago</a>
 
         </div>
       </div>
     </div>
+     
     <div class="footer-copyright">
       <div class="container">
         © 2019 Coding bootcamp
