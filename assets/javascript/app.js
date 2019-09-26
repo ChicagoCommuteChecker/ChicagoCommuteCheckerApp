@@ -28,7 +28,6 @@ $(document).ready(function () {
     $('select').formSelect();
 });
 
-<<<<<<< HEAD
 $(".submitButton").on("click", function (event) {
     event.preventDefault();
     console.log(this);
@@ -48,16 +47,6 @@ $(".submitButton").on("click", function (event) {
 
 function apiAndTextMaker() {
     if (chicagoMetroZips.includes(zipCode)) {
-=======
-// This is an event listener that waits for a click on the submit button to run our API calls and then generate content for the HTML.
-$("#submitButton").on("click", function (event) {
-    event.preventDefault();
-    var zipCode = $("#inputFormID").val().trim();
-    // Here we validate the zip the user entered. If it's in our array, we proceed. Otherwise, we ask the user to enter a valid CTA zipcode.
-    if (chicagoMetroZips.includes(zipCode)) {
-        var trainchoice = $("#trainmenu").val();
-        //Here we make our call to the CTA Alert API. We route the call through cors-anywhere to avoid CORS errors.
->>>>>>> master
         var queryURL = "https://cors-anywhere.herokuapp.com/https://www.transitchicago.com/api/1.0/routes.aspx?routeid=" +trainchoice +"&outputType=JSON";
         console.log(queryURL);
         $.ajax({
@@ -89,12 +78,8 @@ $("#submitButton").on("click", function (event) {
                     method: "GET"
                 }).then(function (futureResponse) {
                     futureWeather = futureResponse;
-<<<<<<< HEAD
-                    console.log(futureWeather);
-=======
                     futureCommuteRecArray = [];
                     $("#futureWeatherDisplay").empty();
->>>>>>> master
                     for (var i = 0; i < futureWeather.list.length; i++) {
                         // Again, need to convert to Fahrenheit.
                         IFTemp = temperatureConverter(futureWeather.list[i].main.temp);
@@ -107,14 +92,9 @@ $("#submitButton").on("click", function (event) {
                         }
                         // Here we write our future data to the DOM to display in its own modal.
                         $("#futureWeatherDisplay").append("<tr><td>" + displayTime + "</td><td>" + IFTemp + " °F" + "</td><td>" + futureWeather.list[i].weather[0].description + "</td><td>" + commuteFutureRec + "</td></tr>")
-<<<<<<< HEAD
-                    }
-
-=======
                     } 
                     $("#weatherInfo").empty();
                     // Here we right current commute conditions to the table on the DOM.
->>>>>>> master
                     $("#weatherInfo").append("<tr><td>" + FTemp + " °F" + "</td><td>" + currentWeather.weather[0].description + "</td><td>" + ctaInfo.CTARoutes.RouteInfo.RouteStatus + "</td><td>" +
                                   commuteRec + "</td></tr>");
                 })
