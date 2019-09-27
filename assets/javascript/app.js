@@ -28,6 +28,17 @@ $(document).ready(function () {
     $('select').formSelect();
 });
 
+$("#trainmenu").on("change", function (event) {
+    event.preventDefault();
+    trainchoice = $("#trainmenu").val();
+    if(trainchoice == "blue") {
+        $("#station-submit").removeClass("hide");
+        $("#stationmenu").removeClass("hide");
+    } else {
+        $("#train-submit").removeClass("hide");
+    }
+})
+
 $(".submitButton").on("click", function (event) {
     event.preventDefault();
     console.log(this);

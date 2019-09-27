@@ -104,7 +104,7 @@
     <option value="y"><span id="y">Yellow</span></option>
   </select>
   
-  <form class="train-submit">
+  <form id="train-submit" class = "hide">
 
     <input type="text" id="inputFormID" placeholder="Enter your 5 digit Zip Code here">
     <button type="submit" class="btn waves-effect waves-light submitButton" id="standardSubmit" name="action">Submit
@@ -114,7 +114,7 @@
 
   </form>
   
-  <select id="stationmenu" class="browser-default test">
+  <select id="stationmenu" class="browser-default test hide">
     <option value="" disabled selected>Select your station</option>
     <option value="OHare" ><span>O'Hare</span></option>
     <option value="Rosemont"><span>Rosemont</span></option>
@@ -151,7 +151,7 @@
     <option value="ForestPark"><span>Forest Park</span></option>
   </select>
 
-  <form class="bluelinesubmit">
+  <form id = "station-submit" class = "hide">
     <button type="submit" class="btn waves-effect waves-light submitButton" id="blueLineSubmit" name="action">Submit
       <i class="material-icons right">send</i>
     </button>

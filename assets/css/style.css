@@ -25,6 +25,9 @@
     margin-right: 50px
 }
 
+.hide {
+    display: none;
+}
 
 .test{
     margin:0 auto;
@@ -32,11 +35,17 @@
 
 }
 
-.train-submit{
+#train-submit{
   width: 30%;
   margin: 0 35%;  
   text-align: center;
 }
+
+#station-submit{
+    width: 30%;
+    margin: 0 35%;  
+    text-align: center;
+  }
 
 .page-footer {
     background: blue
