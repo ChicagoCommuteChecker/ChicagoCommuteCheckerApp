@@ -34,8 +34,17 @@ $("#trainmenu").on("change", function (event) {
     if(trainchoice == "blue") {
         $("#station-submit").removeClass("hide");
         $("#stationmenu").removeClass("hide");
+        if ($("#train-submit").attr("class") != "hide") {
+            $("#train-submit").addClass("hide");
+        }
     } else {
         $("#train-submit").removeClass("hide");
+        if ($("#station-submit").attr("class") != "hide") {
+            $("#station-submit").addClass("hide");
+        }
+        if ($("#stationmenu").attr("class") != "hide") {
+            $("#stationmenu").addClass("hide");
+        }
     }
 })
 
