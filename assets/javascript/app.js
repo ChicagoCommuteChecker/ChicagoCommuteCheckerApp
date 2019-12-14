@@ -10,6 +10,8 @@ var futureWeather;
 var ctaInfo;
 var FTemp;
 var IFTemp;
+var zipCode;
+var trainchoice;
 
 //Based on converter found on w3schools
 function temperatureConverter(valNum) {
@@ -26,15 +28,47 @@ $(document).ready(function () {
     $('select').formSelect();
 });
 
-// This is an event listener that waits for a click on the submit button to run our API calls and then generate content for the HTML.
-$("#submitButton").on("click", function (event) {
+$("#trainmenu").on("change", function (event) {
     event.preventDefault();
-    var zipCode = $("#inputFormID").val().trim();
-    // Here we validate the zip the user entered. If it's in our array, we proceed. Otherwise, we ask the user to enter a valid CTA zipcode.
+    trainchoice = $("#trainmenu").val();
+    if(trainchoice == "blue") {
+        $("#station-submit").removeClass("hide");
+        $("#stationmenu").removeClass("hide");
+        if ($("#train-submit").attr("class") != "hide") {
+            $("#train-submit").addClass("hide");
+        }
+    } else {
+        $("#train-submit").removeClass("hide");
+        if ($("#station-submit").attr("class") != "hide") {
+            $("#station-submit").addClass("hide");
+        }
+        if ($("#stationmenu").attr("class") != "hide") {
+            $("#stationmenu").addClass("hide");
+        }
+    }
+})
+
+$(".submitButton").on("click", function (event) {
+    event.preventDefault();
+    console.log(this);
+    var whichButton = ($(this).attr("id"));
+    if (whichButton === "standardSubmit") {
+        zipCode = $("#inputFormID").val().trim();
+        trainchoice = $("#trainmenu").val();
+        console.log(zipCode);
+        apiAndTextMaker();
+    } else {
+        var station = $("#stationmenu").val().toString();
+        zipCode = blueLineInfo[station].zip;
+        trainchoice = "blue";
+        apiAndTextMaker();
+    }
+});
+
+function apiAndTextMaker() {
     if (chicagoMetroZips.includes(zipCode)) {
-        var trainchoice = $("#trainmenu").val();
-        //Here we make our call to the CTA Alert API. We route the call through cors-anywhere to avoid CORS errors.
         var queryURL = "https://cors-anywhere.herokuapp.com/https://www.transitchicago.com/api/1.0/routes.aspx?routeid=" +trainchoice +"&outputType=JSON";
+        console.log(queryURL);
         $.ajax({
           url: queryURL,
           method: "GET"
@@ -83,7 +117,6 @@ $("#submitButton").on("click", function (event) {
                     // Here we right current commute conditions to the table on the DOM.
                     $("#weatherInfo").append("<tr><td>" + FTemp + " °F" + "</td><td>" + currentWeather.weather[0].description + "</td><td>" + ctaInfo.CTARoutes.RouteInfo.RouteStatus + "</td><td>" +
                                   commuteRec + "</td></tr>");
-
                 })
             })
         })
@@ -95,5 +128,4 @@ $("#submitButton").on("click", function (event) {
         $("#inputFormID").val("");
        $("#inputFormID").attr("placeholder", "Please enter a valid CTA Zipcode")
     }
-
-});
+}
