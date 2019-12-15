@@ -1,6 +1,6 @@
 # ChicagoCommuteCheckerApp
 
-g[Chicago Commute Checker](https://chicagocommutechecker.github.io/ChicagoCommuteCheckerApp/)
+[Chicago Commute Checker](https://chicagocommutechecker.github.io/ChicagoCommuteCheckerApp/)
 
 We created a Web Application to help Chicago commuters figure out what their commute will look like.
 
