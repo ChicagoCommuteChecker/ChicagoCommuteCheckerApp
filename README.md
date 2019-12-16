@@ -20,6 +20,9 @@ How our App works
 
 5. Click on the "Weekly Forecast" button to view weather conditions through the next 5 days.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 9d97345bb5ef17d9b024ffeb6ca0303993ab7951
 
 ## Authors
 
@@ -33,5 +36,8 @@ HTML5<br>
 CSS3<br>
 Javascript<br>
 API's<br>
+<<<<<<< HEAD
 =======
 >>>>>>> b47d799aa6bd5fd6e3e4ad6009729d6821d17c69
+=======
+>>>>>>> 9d97345bb5ef17d9b024ffeb6ca0303993ab7951
