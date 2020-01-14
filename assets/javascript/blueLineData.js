@@ -1,22 +1,26 @@
 // The object below contains data for the Blue Line related to a feature currently in development which will allow users to select a specific station they use.
 
-var blueLineInfo = {
-    OHare: {
+var blueLineInfo = [
+    {
+        name: "O&#39;Hare",
         zip: "60666",
         stationID: 40890,
         ada: "accessible"
     },
-    Rosemont: {
+    {
+        name: "Rosemont",
         zip: "60018",
         stationID: 40820,
         ada: "accessible"
     },
-    Cumberland: {
+    {
+        name: "Cumberland",
         zip: "60631",
         stationID: 40230,
         ada: "accessible"
     },
-    HarlemOHare: {
+    {
+        name: "Harlem &#40;O&#39;Hare Branch&#41;",
         zip: "60656",
         stationID: 40750,
         ada: "accessible"
@@ -166,4 +170,4 @@ var blueLineInfo = {
         stationID: 40390,
         ada: "accessible"
     }
-}
+]
