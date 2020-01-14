@@ -47,7 +47,7 @@ var orangeLineInfo = {
     quincy:{
         zip: "60606",
         stationID: 40040,
-        ada: "Not accessible"
+        ada: "NOT accessible"
     },
     washingtonWells:{
         zip: "60606",
