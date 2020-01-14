@@ -25,147 +25,176 @@ var blueLineInfo = [
         stationID: 40750,
         ada: "accessible"
     },
-    JeffersonPark: {
+    {
+        name: "Jefferson Park",
         zip: "60630",
         stationID: 41280,
         ada: "accessible"
     },
-    Montrose: {
+    {
+        name: "Montrose",
         zip: "60641",
         stationID: 41330,
         ada: "NOT accessible"
     },
-    IrvingPark: {
+    {
+        name: "Irving Park",
         zip: "60613",
         stationID: 40550,
         ada: "NOT accessible"
     },
-    Addison: {
+    {
+        name: "Addison",
         zip: "60618",
         stationID: 41240,
         ada: "accessible"
     },
-    Belmont: {
+    {
+        name: "Belmont",
         zip: "60618",
         stationID: 40060,
         ada: "NOT accessible"
     },
-    LoganSquare: {
+    {
+        name: "Logan Square",
         zip: "60647",
         stationID: 41020,
         ada: "accessible"
     },
-    California: {
+    {
+        name: "California",
         zip: "60647",
         stationID: 40570,
         ada: "NOT accessible"
     },
-    WesternOHare: {
+    {
+        name: "Western &#40;O&#39;Hare Branch&#41;",
         zip: "60647",
         stationID: 40670,
         ada: "accessible"
     },
-    Damen: {
+    {
+        name: "Damen",
         zip: "60622",
         stationID: 40590,
         ada: "NOT accessible"
     },
-    Division: {
+    {
+        name: "Division",
         zip: "60622",
         stationID: 40320,
         ada: "NOT accessible"
     },
-    Chicago: {
+    {
+        name: "Chicago",
         zip: "60622",
         stationID: 41410,
         ada: "NOT accessible"
     },
-    Grand: {
+    {
+        name: "Grand",
         zip: "60622",
         stationID: 40490,
         ada: "NOT accessible"
     },
-    ClarkLake: {
+    {
+        name: "Clark&#47;Lake",
         zip: "60601",
         stationID: 40380,
         ada: "accessible"
     },
-    Washington: {
+    {
+        name: "Washington",
         zip: "60602",
         stationID: 40370,
         ada: "NOT accessible"
     },
-    Monroe: {
+    {
+        name: "Monroe",
         zip: "60603",
         stationIDs: 40790,
         ada: "NOT accessible"
     },
-    Jackson: {
+    {
+        name: "Jackson",
         zip: "60604",
         stationID: 40070,
         ada: "accessible"
     },
-    LaSalle: {
+    {
+        name: "LaSalle",
         zip: "60605",
         stationID: 41340,
         ada: "NOT accessible"
     },
-    Clinton: {
+    {
+        name: "Clinton",
         zip: "60607",
         stationID: 40430,
         ada: "NOT accessible"
     },
-    UICHalsted: {
+    {
+        name: "UIC-Halsted",
         zip: "60607",
         stationID: 40350,
         ada: "accessible"
     },
-    Racine: {
+    {
+        name: "Racine",
         zip: "60607",
         stationID: 40470,
         ada: "NOT accessible"
     },
-    IllMedDistrict: {
+    {
+        name: "Illinois Medical District",
         zip: "60612",
         stationID: 40810,
         ada: "accessible"
     },
-    WesternForestPark: {
+    {
+        name: "Western &#40;Forest Park Branch&#41;",
         zip: "60612",
         stationID: 40220,
         ada: "NOT accessible"
     },
-    KedzieHoman: {
+    {
+        name: "Kedzie-Homan",
         zip: "60612",
         stationID: 40250,
         ada: "accessible"
     },
-    Pulaski: {
+    {
+        name: "Pulaski",
         zip: "60612",
         stationID: 40920,
         ada: "NOT accessible"
     },
-    Cicero: {
+    {
+        name: "Cicero",
         zip: "60644",
         stationID: 40970,
         ada: "NOT accessible"
     },
-    Austin: {
+    {
+        name: "Austin",
         zip: "60304",
         stationID: 40010,
         ada: "NOT accessible"
     },
-    OakPark: {
+    {
+        name: "Oak Park",
         zip: "60304",
         stationID: 40180,
         ada: "NOT accessible"
     },
-    HarlemForestPark: {
+    {
+        name: "Harlem &#40;Forest Park Branch&#41;",
         zip: "60130",
         stationID: 40980,
         ada: "NOT accessible"
     },
-    ForestPark: {
+    {
+        name: "Forest Park",
         zip: "60130",
         stationID: 40390,
         ada: "accessible"
