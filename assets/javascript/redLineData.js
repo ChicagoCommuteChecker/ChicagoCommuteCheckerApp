@@ -7,12 +7,12 @@ var redLineInfo = {
     jarvis:{
         zip: "60626",
         stationID: 41190,
-        ada: "Not accessible"
+        ada: "NOT accessible"
     },
     morse:{
         zip: "60626",
         stationID: 40100,
-        ada: "Not accessible"
+        ada: "NOT accessible"
     },
     loyola:{
         zip: "60626",
@@ -37,7 +37,7 @@ var redLineInfo = {
     berwyn:{
         zip: "60640",
         stationID: 40340,
-        ada: "Not accessible"
+        ada: "NOT accessible"
     },
     argyle:{
         zip: "60640",
@@ -47,7 +47,7 @@ var redLineInfo = {
     lawrence:{
         zip: "60640",
         stationID: 40770,
-        ada: "Not accessible"
+        ada: "NOT accessible"
     },
     wilson:{
         zip: "60640",
