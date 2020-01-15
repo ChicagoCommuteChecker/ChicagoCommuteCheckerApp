@@ -28,10 +28,20 @@ $(document).ready(function () {
     $('select').formSelect();
 });
 
+function PullDown(array) {
+    $("#stationmenu").empty;
+    for (let i = 0; i < array.length; i++) {
+        let answerValue = i;
+        let answerText = array[i].name;
+        $("#stationmenu").append("<option value='" + answerValue + "'><span>" + answerText + "</span></option>")
+    }
+};
+
 $("#trainmenu").on("change", function (event) {
     event.preventDefault();
     trainchoice = $("#trainmenu").val();
     if(trainchoice == "blue") {
+        PullDown(blueLineInfo);
         $("#station-submit").removeClass("hide");
         $("#stationmenu").removeClass("hide");
         if ($("#train-submit").attr("class") != "hide") {
@@ -114,7 +124,7 @@ function apiAndTextMaker() {
                         $("#futureWeatherDisplay").append("<tr><td>" + displayTime + "</td><td>" + IFTemp + " °F" + "</td><td>" + futureWeather.list[i].weather[0].description + "</td><td>" + commuteFutureRec + "</td></tr>")
                     } 
                     $("#weatherInfo").empty();
-                    // Here we right current commute conditions to the table on the DOM.
+                    // Here we write current commute conditions to the table on the DOM.
                     $("#weatherInfo").append("<tr><td>" + FTemp + " °F" + "</td><td>" + currentWeather.weather[0].description + "</td><td>" + ctaInfo.CTARoutes.RouteInfo.RouteStatus + "</td><td>" +
                                   commuteRec + "</td></tr>");
                 })

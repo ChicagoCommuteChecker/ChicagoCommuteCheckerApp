@@ -1,3 +1,0 @@
-function PullDown(object) {
-    
-}

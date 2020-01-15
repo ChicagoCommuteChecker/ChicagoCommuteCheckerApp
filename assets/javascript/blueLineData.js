@@ -199,4 +199,4 @@ var blueLineInfo = [
         stationID: 40390,
         ada: "accessible"
     }
-]
+];
