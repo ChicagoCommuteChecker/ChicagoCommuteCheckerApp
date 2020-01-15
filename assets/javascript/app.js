@@ -33,7 +33,7 @@ function PullDown(array) {
     for (let i = 0; i < array.length; i++) {
         let answerValue = i;
         let answerText = array[i].name;
-        $("#stationmenu").append("<option value='" + answerValue + "'><span>" + answerText + "</span></option>")
+        $("#stationmenu").append("<option value='" + answerValue + "'>" + answerText + "</option>")
     }
 };
 
