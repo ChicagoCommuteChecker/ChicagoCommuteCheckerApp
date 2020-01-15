@@ -1,167 +1,200 @@
-var redLineInfo = {
-    howard:{
+var redLineInfo = [
+    {
+        name: "Howard",
         zip: "60626",
         stationID: 40900,
         ada: "accessible"
     },
-    jarvis:{
+    {
+        name: "Jarvis",
         zip: "60626",
         stationID: 41190,
         ada: "NOT accessible"
     },
-    morse:{
+    {
+        name: "Morse",
         zip: "60626",
         stationID: 40100,
         ada: "NOT accessible"
     },
-    loyola:{
+    {
+        name: "Loyola",
         zip: "60626",
         stationID: 41300,
         ada: "accessible"
     },
-    granville:{
+    {
+        name: "Granville",
         zip: "60660",
         stationID: 40760,
         ada: "accessible"
     },
-    thorndale:{
+    {
+        name: "Thorndale",
         zip: "60660",
         stationID: 40880,
         ada: "NOT accessible"
     },
-    brynMawr:{
+    {
+        name: "Bryn Mawr",
         zip: "60660",
         stationID: 41380,
         ada: "NOT accessible"
     },
-    berwyn:{
+    {
+        name: "Berwyn",
         zip: "60640",
         stationID: 40340,
         ada: "NOT accessible"
     },
-    argyle:{
+    {
+        name: "Argyle",
         zip: "60640",
         stationID: 41200,
         ada: "NOT accessible"
     },
-    lawrence:{
+    {
+        name: "Lawrence",
         zip: "60640",
         stationID: 40770,
         ada: "NOT accessible"
     },
-    wilson:{
+    {
+        name: "Wilson",
         zip: "60640",
         stationID: 40540,
         ada: "accessible"
     },
-    sheridan:{
+    {
+        name: "Sheridan",
         zip: "60647",
         stationID: 40080,
         ada: "NOT accessible"
     },
-    addison:{
+    {
+        name: "Addison",
         zip: "60613",
         stationID: 41420,
         ada: "accessible"
     },
-    belmont:{
+    {
+        name: "Belmont",
         zip: "60657",
         stationID: 41320,
         ada: "accessible"
     },
-    fullerton:{
+    {
+        name: "Fullerton",
         zip: "60614",
         stationID: 41220,
         ada: "accessible"
     },
-    northClyborn: {
+    {
+        name: "North/Clyborn",
         zip: "60622",
         stationID: 40650,
         ada: "NOT accessible"
     },
-    clarkDivision: {
+    {
+        name: "Clark/Division",
         zip: "60610",
         stationID: 40630,
         ada: "accessible"
     },
-    chicago: {
+    {
+        name: "Chicago",
         zip: "60610",
         stationID: 41450,
         ada: "accessible"
     },
-    grand: {
+    {
+        name: "Grand",
         zip: "60610",
         stationIDs: 40330,
         ada: "accessible"
     },
-    lake: {
+    {
+        name: "Lake",
         zip: "60601",
         stationID: 41660,
         ada: "accessible"
     },
-    monroe: {
+    {
+        name: "Monroe",
         zip: "60603",
         stationID: 41090,
         ada: "accessible"
     },
-    jackson: {
+    {
+        name: "Jackson",
         zip: "60604",
         stationID: 40560,
         ada: "accessible"
     },
-    harrison: {
+    {
+        name: "Harrison",
         zip: "60605",
         stationID: 41490,
         ada: "accessible"
     },
-    roosevelt: {
+    {
+        name: "Roosevelt",
         zip: "60605",
         stationID: 41400,
         ada: "accessible"
     },
-    cermakChinatown: {
+    {
+        name: "Cermak-Chinatown",
         zip: "60616",
         stationID: 41000,
         ada: "accessible"
     },
-    sox35th: {
+    {
+        name: "Sox-35th",
         zip: "60616",
         stationID: 40190,
         ada: "accessible"
     },
-    fortySeventh: {
+    {
+        name: "47th",
         zip: "60609",
         stationID: 41230,
         ada: "accessible"
     },
-    garfield: {
+    {
+        name: "Garfield",
         zip: "60609",
         stationID: 41170,
         ada: "accessible"
     },
-    sixtyThrid: {
+    {
+        name: "63rd",
         zip: "60621",
         stationID: 40910,
         ada: "accessible"
     },
-    sixtyNinth: {
+    {
+        name: "69th",
         zip: "60621",
         stationID: 40990,
         ada: "accessible"
     },
-    seventyNinth: {
+    {
+        name: "79th",
         zip: "60620",
         stationID: 40240,
         ada: "accessible"
     },
-    eightySeventh: {
+    {
+        name: "87th",
         zip: "60620",
         stationID: 41430,
         ada: "accessible"
     },
-    nintyFifthDanRyan: {
+    {
+        name: "95th/Dan Ryan",
         zip: "60620",
         stationID: 40450,
         ada: "accessible"
     }
-}
+]
