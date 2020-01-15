@@ -20,6 +20,7 @@ How our App works
 
 5. Click on the "Weekly Forecast" button to view weather conditions through the next 5 days.
 
+
 ## Authors
 
 * **William Oakley** - *Collaborator* - https://github.com/woaky1
@@ -32,3 +33,4 @@ HTML5<br>
 CSS3<br>
 Javascript<br>
 API's<br>
+
