@@ -54,6 +54,13 @@ $("#trainmenu").on("change", function (event) {
         if ($("#train-submit").attr("class") != "hide") {
             $("#train-submit").addClass("hide");
         }
+    } else if (trainchoice == "org") {
+        PullDown(orangeLineInfo);
+        $("#station-submit").removeClass("hide");
+        $("#stationmenu").removeClass("hide");
+        if ($("#train-submit").attr("class") != "hide") {
+            $("#train-submit").addClass("hide");
+        }
     } else {
         $("#train-submit").removeClass("hide");
         if ($("#station-submit").attr("class") != "hide") {
@@ -67,12 +74,12 @@ $("#trainmenu").on("change", function (event) {
 
 $(".submitButton").on("click", function (event) {
     event.preventDefault();
-    console.log(this);
+    // console.log(this);
     var whichButton = ($(this).attr("id"));
     if (whichButton === "standardSubmit") {
         zipCode = $("#inputFormID").val().trim();
         trainchoice = $("#trainmenu").val();
-        console.log(zipCode);
+        // console.log(zipCode);
         apiAndTextMaker();
     } else {
         var station = $("#stationmenu").val().toString();
@@ -81,6 +88,8 @@ $(".submitButton").on("click", function (event) {
             zipCode = blueLineInfo[station].zip;
         } else if (trainchoice == "red") {
             zipCode = redLineInfo[station].zip;
+        } else if (trainchoice == "org") {
+            zipCode = orangeLineInfo[station].zip;
         }
         apiAndTextMaker();
     }
@@ -89,7 +98,7 @@ $(".submitButton").on("click", function (event) {
 function apiAndTextMaker() {
     if (chicagoMetroZips.includes(zipCode)) {
         var queryURL = "https://cors-anywhere.herokuapp.com/https://www.transitchicago.com/api/1.0/routes.aspx?routeid=" +trainchoice +"&outputType=JSON";
-        console.log(queryURL);
+        // console.log(queryURL);
         $.ajax({
           url: queryURL,
           method: "GET"
