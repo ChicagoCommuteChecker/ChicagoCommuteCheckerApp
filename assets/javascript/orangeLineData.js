@@ -1,77 +1,98 @@
-var orangeLineInfo = {
-    midway:{
+var orangeLineInfo = [
+    {
+        name: "Midway",
         zip: "60629",
         stationID: 40930,
         ada: "accessible"
     },
-    pulaski:{
+    {
+        name: "Pulaski",
         zip: "60632",
         stationID: 40960,
         ada: "accessible"
     },
-    kedzie:{
+    {
+        name: "Kedzie",
         zip: "60632",
         stationID: 41150,
         ada: "accessible"
     },
-    western:{
+    {
+        name: "Western",
         zip: "60609",
         stationID: 40310,
         ada: "accessible"
     },
-    thirtyfifthArcher:{
+    {
+        name: "35th/Archer",
         zip: "60609",
         stationID: 40120,
         ada: "accessible"
     },
-    ashland:{
+    {
+        name: "Ashland",
         zip: "60608",
         stationID: 41060,
         ada: "accessible"
     },
-    halsted:{
+    {
+        name: "Halsted",
         zip: "60608",
         stationID: 41130,
         ada: "accessible"
     },
-    hwlStateVanburen:{
+    {
+        name: "Roosevelt",
+        zip: "60605",
+        stationID: 41400,
+        ada: "accessible"
+    },
+    {
+        name: "Harold Washington Library-State/Van Buren",
         zip: "60604",
         stationID: 40850,
         ada: "accessible"
     },
-    lasalleVanburen:{
+    {
+        name: "LaSalle/Van Buren",
         zip: "60605",
         stationID: 40160,
         ada: "NOT accessible"
     },
-    quincy:{
+    {
+        name: "Quincy",
         zip: "60606",
         stationID: 40040,
         ada: "NOT accessible"
     },
-    washingtonWells:{
+    {
+        name: "Washington/Wells",
         zip: "60606",
         stationID: 40730,
         ada: "accessible"
     },
-    clarkLake:{
+    {
+        name: "Clark/Lake",
         zip: "60601",
         stationID: 40380,
         ada: "accessible"
     },
-    stateLake:{
+    {
+        name: "State/Lake",
         zip: "60601",
         stationID: 40260,
         ada: "NOT accessible"
     },
-    washingtonWabash:{
+    {
+        name: "Washington/Wabash",
         zip: "60602",
         stationID: 41700,
         ada: "accessible"
     },
-    adamsWabash:{
+    {
+        name: "Adams/Wabash",
         zip: "60603",
         stationID: 40680,
         ada: "accessible"
     },
-}
+]

@@ -28,10 +28,34 @@ $(document).ready(function () {
     $('select').formSelect();
 });
 
+function PullDown(array) {
+    $("#stationmenu").empty;
+    for (let i = 0; i < array.length; i++) {
+        let answerValue = i;
+        let answerText = array[i].name;
+        $("#stationmenu").append("<option value='" + answerValue + "'>" + answerText + "</option>")
+    }
+};
+
 $("#trainmenu").on("change", function (event) {
     event.preventDefault();
     trainchoice = $("#trainmenu").val();
     if(trainchoice == "blue") {
+        PullDown(blueLineInfo);
+        $("#station-submit").removeClass("hide");
+        $("#stationmenu").removeClass("hide");
+        if ($("#train-submit").attr("class") != "hide") {
+            $("#train-submit").addClass("hide");
+        }
+    } else if (trainchoice == "red") {
+        PullDown(redLineInfo);
+        $("#station-submit").removeClass("hide");
+        $("#stationmenu").removeClass("hide");
+        if ($("#train-submit").attr("class") != "hide") {
+            $("#train-submit").addClass("hide");
+        }
+    } else if (trainchoice == "org") {
+        PullDown(orangeLineInfo);
         $("#station-submit").removeClass("hide");
         $("#stationmenu").removeClass("hide");
         if ($("#train-submit").attr("class") != "hide") {
@@ -50,17 +74,23 @@ $("#trainmenu").on("change", function (event) {
 
 $(".submitButton").on("click", function (event) {
     event.preventDefault();
-    console.log(this);
+    // console.log(this);
     var whichButton = ($(this).attr("id"));
     if (whichButton === "standardSubmit") {
         zipCode = $("#inputFormID").val().trim();
         trainchoice = $("#trainmenu").val();
-        console.log(zipCode);
+        // console.log(zipCode);
         apiAndTextMaker();
     } else {
         var station = $("#stationmenu").val().toString();
-        zipCode = blueLineInfo[station].zip;
-        trainchoice = "blue";
+        trainchoice = $("#trainmenu").val();
+        if (trainchoice == "blue"){ 
+            zipCode = blueLineInfo[station].zip;
+        } else if (trainchoice == "red") {
+            zipCode = redLineInfo[station].zip;
+        } else if (trainchoice == "org") {
+            zipCode = orangeLineInfo[station].zip;
+        }
         apiAndTextMaker();
     }
 });
@@ -68,7 +98,7 @@ $(".submitButton").on("click", function (event) {
 function apiAndTextMaker() {
     if (chicagoMetroZips.includes(zipCode)) {
         var queryURL = "https://cors-anywhere.herokuapp.com/https://www.transitchicago.com/api/1.0/routes.aspx?routeid=" +trainchoice +"&outputType=JSON";
-        console.log(queryURL);
+        // console.log(queryURL);
         $.ajax({
           url: queryURL,
           method: "GET"
@@ -114,7 +144,7 @@ function apiAndTextMaker() {
                         $("#futureWeatherDisplay").append("<tr><td>" + displayTime + "</td><td>" + IFTemp + " °F" + "</td><td>" + futureWeather.list[i].weather[0].description + "</td><td>" + commuteFutureRec + "</td></tr>")
                     } 
                     $("#weatherInfo").empty();
-                    // Here we right current commute conditions to the table on the DOM.
+                    // Here we write current commute conditions to the table on the DOM.
                     $("#weatherInfo").append("<tr><td>" + FTemp + " °F" + "</td><td>" + currentWeather.weather[0].description + "</td><td>" + ctaInfo.CTARoutes.RouteInfo.RouteStatus + "</td><td>" +
                                   commuteRec + "</td></tr>");
                 })
