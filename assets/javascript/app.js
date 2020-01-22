@@ -15,9 +15,9 @@ var trainchoice;
 
 //Based on converter found on w3schools
 function temperatureConverter(valNum) {
-  valNum = parseFloat(valNum);
-  FTempFloat = ((valNum-273.15)*1.8)+32;
-  return parseInt(FTempFloat);
+    valNum = parseFloat(valNum);
+    FTempFloat = ((valNum - 273.15) * 1.8) + 32;
+    return parseInt(FTempFloat);
 
 }
 
@@ -40,7 +40,7 @@ function PullDown(array) {
 $("#trainmenu").on("change", function (event) {
     event.preventDefault();
     trainchoice = $("#trainmenu").val();
-    if(trainchoice == "blue") {
+    if (trainchoice == "blue") {
         PullDown(blueLineInfo);
         $("#station-submit").removeClass("hide");
         $("#stationmenu").removeClass("hide");
@@ -56,6 +56,13 @@ $("#trainmenu").on("change", function (event) {
         }
     } else if (trainchoice == "org") {
         PullDown(orangeLineInfo);
+        $("#station-submit").removeClass("hide");
+        $("#stationmenu").removeClass("hide");
+        if ($("#train-submit").attr("class") != "hide") {
+            $("#train-submit").addClass("hide");
+        }
+    } else if (trainchoice == "brn") {
+        PullDown(brownLineInfo);
         $("#station-submit").removeClass("hide");
         $("#stationmenu").removeClass("hide");
         if ($("#train-submit").attr("class") != "hide") {
@@ -84,12 +91,14 @@ $(".submitButton").on("click", function (event) {
     } else {
         var station = $("#stationmenu").val().toString();
         trainchoice = $("#trainmenu").val();
-        if (trainchoice == "blue"){ 
+        if (trainchoice == "blue") {
             zipCode = blueLineInfo[station].zip;
         } else if (trainchoice == "red") {
             zipCode = redLineInfo[station].zip;
         } else if (trainchoice == "org") {
             zipCode = orangeLineInfo[station].zip;
+        } else if (trainchoice == "brn") {
+            zipCode = brownLineInfo[station].zip;
         }
         apiAndTextMaker();
     }
@@ -97,15 +106,15 @@ $(".submitButton").on("click", function (event) {
 
 function apiAndTextMaker() {
     if (chicagoMetroZips.includes(zipCode)) {
-        var queryURL = "https://cors-anywhere.herokuapp.com/https://www.transitchicago.com/api/1.0/routes.aspx?routeid=" +trainchoice +"&outputType=JSON";
+        var queryURL = "https://cors-anywhere.herokuapp.com/https://www.transitchicago.com/api/1.0/routes.aspx?routeid=" + trainchoice + "&outputType=JSON";
         // console.log(queryURL);
         $.ajax({
-          url: queryURL,
-          method: "GET"
-        }).then(function(CTAresponse) {
-          ctaInfo = CTAresponse;
-          // Next we do our API call to Openweather's current weather API. Our API calls are nested so javascript doesn't attempt to display new text to the DOM until all our data has come back from the calls.
-          var weatherQueryURL = "https://api.openweathermap.org/data/2.5/weather?zip=" + zipCode + ",us&appid=4df0823f371a314fac922d45729a9495";
+            url: queryURL,
+            method: "GET"
+        }).then(function (CTAresponse) {
+            ctaInfo = CTAresponse;
+            // Next we do our API call to Openweather's current weather API. Our API calls are nested so javascript doesn't attempt to display new text to the DOM until all our data has come back from the calls.
+            var weatherQueryURL = "https://api.openweathermap.org/data/2.5/weather?zip=" + zipCode + ",us&appid=4df0823f371a314fac922d45729a9495";
             $.ajax({
                 url: weatherQueryURL,
                 method: "GET"
@@ -115,12 +124,12 @@ function apiAndTextMaker() {
                 FTemp = temperatureConverter(currentWeather.main.temp);
                 // Here we determine whether the user should commute, based on weather conditions, temperature, and CTA route status.
                 if (ctaInfo) {
-                    if ((badWeather.includes(currentWeather.weather[0].main)) || (FTemp < 32) || (ctaInfo.CTARoutes.RouteInfo.RouteStatus !== ("Normal Service" || "Planned Service"))){
+                    if ((badWeather.includes(currentWeather.weather[0].main)) || (FTemp < 32) || (ctaInfo.CTARoutes.RouteInfo.RouteStatus !== ("Normal Service" || "Planned Service"))) {
                         commuteRec = "Work from home if you can.";
                     } else {
                         commuteRec = "Enjoy your commute.";
-                    } 
-                } 
+                    }
+                }
                 // Here we make out API call to Openweather's 5 day/3 hour forecast API.
                 var fiveDayQueryURL = "https://api.openweathermap.org/data/2.5/forecast?zip=" + zipCode + ",us&appid=4df0823f371a314fac922d45729a9495";
                 $.ajax({
@@ -142,20 +151,20 @@ function apiAndTextMaker() {
                         }
                         // Here we write our future data to the DOM to display in its own modal.
                         $("#futureWeatherDisplay").append("<tr><td>" + displayTime + "</td><td>" + IFTemp + " °F" + "</td><td>" + futureWeather.list[i].weather[0].description + "</td><td>" + commuteFutureRec + "</td></tr>")
-                    } 
+                    }
                     $("#weatherInfo").empty();
                     // Here we write current commute conditions to the table on the DOM.
                     $("#weatherInfo").append("<tr><td>" + FTemp + " °F" + "</td><td>" + currentWeather.weather[0].description + "</td><td>" + ctaInfo.CTARoutes.RouteInfo.RouteStatus + "</td><td>" +
-                                  commuteRec + "</td></tr>");
+                        commuteRec + "</td></tr>");
                 })
             })
         })
 
-        
+
 
     } else {
         // This piece of code asks the user to input a different zip if what they entered isn't found in our zipcode array.
         $("#inputFormID").val("");
-       $("#inputFormID").attr("placeholder", "Please enter a valid CTA Zipcode")
+        $("#inputFormID").attr("placeholder", "Please enter a valid CTA Zipcode")
     }
 }

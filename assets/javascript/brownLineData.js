@@ -66,6 +66,12 @@ var brownLineInfo = [
         ada: "accessible"
     },
     {
+        name: "Belmont",
+        zip: "60657",
+        stationID: 41320,
+        ada: "accessible"
+    },
+    {
         name: "Wellington",
         zip: "60657",
         stationID: 41210,
@@ -108,7 +114,7 @@ var brownLineInfo = [
         ada: "accessible"
     },
     {
-        name: "Washington Wells",
+        name: "Washington/Wells",
         zip: "60606",
         stationIDs: 40730,
         ada: "accessible"
@@ -120,37 +126,37 @@ var brownLineInfo = [
         ada: "accessible"
     },
     {
-        name: "LaSalle Van Buren",
+        name: "LaSalle/Van Buren",
         zip: "60605",
         stationID: 40160,
         ada: "NOT accessible"
     },
     {
-        name: "Harold Washington Library Van Buren",
+        name: "Harold Washington Library-State/Van Buren",
         zip: "60604",
         stationID: 40850,
         ada: "accessible"
     },
     {
-        name: "Adams Wabash",
+        name: "Adams/Wabash",
         zip: "60603",
         stationID: 40680,
         ada: "NOT accessible"
     },
     {
-        name: "Washington Wabash",
+        name: "Washington/Wabash",
         zip: "60602",
         stationID: 41700,
         ada: "accessible"
     },
     {
-        name: "State Lake",
+        name: "State/Lake",
         zip: "60601",
         stationID: 40260,
         ada: "NOT accessible"
     },
     {
-        name: "Clark Lake",
+        name: "Clark/Lake",
         zip: "60601",
         stationID: 40380,
         ada: "accessible"
