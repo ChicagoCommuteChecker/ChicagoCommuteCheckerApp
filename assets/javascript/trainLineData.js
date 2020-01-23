@@ -2,7 +2,7 @@
 
 var blueLineInfo = [
     {
-        name: "O&#39;Hare",
+        name: "O-Hare",
         zip: "60666",
         stationID: 40890,
         ada: "accessible"
@@ -20,7 +20,7 @@ var blueLineInfo = [
         ada: "accessible"
     },
     {
-        name: "Harlem &#40;O&#39;Hare Branch&#41;",
+        name: "Harlem &#40;O-Hare Branch&#41;",
         zip: "60656",
         stationID: 40750,
         ada: "accessible"
@@ -68,7 +68,7 @@ var blueLineInfo = [
         ada: "NOT accessible"
     },
     {
-        name: "Western &#40;O&#39;Hare Branch&#41;",
+        name: "Western &#40;O-Hare Branch&#41;",
         zip: "60647",
         stationID: 40670,
         ada: "accessible"
@@ -98,7 +98,7 @@ var blueLineInfo = [
         ada: "NOT accessible"
     },
     {
-        name: "Clark&#47;Lake",
+        name: "Clark/Lake",
         zip: "60601",
         stationID: 40380,
         ada: "accessible"
@@ -587,13 +587,13 @@ var greenLineInfo = [
         ada: "accessible"
     },
     {
-        name: "Clark&#47;Lake",
+        name: "Clark/Lake",
         zip: "60601",
         stationID: 40380,
         ada: "accessible"
     },
     {
-        name: "State&#47;Lake",
+        name: "State/Lake",
         zip: "60601",
         stationID: 40260,
         ada: "NOT accessible"

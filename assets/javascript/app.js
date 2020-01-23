@@ -68,6 +68,13 @@ $("#trainmenu").on("change", function (event) {
         if ($("#train-submit").attr("class") != "hide") {
             $("#train-submit").addClass("hide");
         }
+    } else if (trainchoice == "g") {
+        PullDown(greenLineInfo);
+        $("#station-submit").removeClass("hide");
+        $("#stationmenu").removeClass("hide");
+        if ($("#train-submit").attr("class") != "hide") {
+            $("#train-submit").addClass("hide");
+        }
     } else {
         $("#train-submit").removeClass("hide");
         if ($("#station-submit").attr("class") != "hide") {
@@ -99,6 +106,8 @@ $(".submitButton").on("click", function (event) {
             zipCode = orangeLineInfo[station].zip;
         } else if (trainchoice == "brn") {
             zipCode = brownLineInfo[station].zip;
+        } else if (trainchoice == "g") {
+            zipCode = greenLineInfo[station].zip;
         }
         apiAndTextMaker();
     }
