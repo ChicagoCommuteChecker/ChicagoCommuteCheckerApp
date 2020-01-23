@@ -29,7 +29,7 @@ $(document).ready(function () {
 });
 
 function PullDown(array) {
-    $("#stationmenu").empty;
+    $("#stationmenu").empty();
     for (let i = 0; i < array.length; i++) {
         let answerValue = i;
         let answerText = array[i].name;
