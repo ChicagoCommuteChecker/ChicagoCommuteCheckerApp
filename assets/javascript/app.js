@@ -29,7 +29,7 @@ $(document).ready(function () {
 });
 
 function PullDown(array) {
-    $("#stationmenu").empty;
+    $("#stationmenu").empty();
     for (let i = 0; i < array.length; i++) {
         let answerValue = i;
         let answerText = array[i].name;
@@ -68,6 +68,13 @@ $("#trainmenu").on("change", function (event) {
         if ($("#train-submit").attr("class") != "hide") {
             $("#train-submit").addClass("hide");
         }
+    } else if (trainchoice == "g") {
+        PullDown(greenLineInfo);
+        $("#station-submit").removeClass("hide");
+        $("#stationmenu").removeClass("hide");
+        if ($("#train-submit").attr("class") != "hide") {
+            $("#train-submit").addClass("hide");
+        }
     } else {
         $("#train-submit").removeClass("hide");
         if ($("#station-submit").attr("class") != "hide") {
@@ -99,6 +106,8 @@ $(".submitButton").on("click", function (event) {
             zipCode = orangeLineInfo[station].zip;
         } else if (trainchoice == "brn") {
             zipCode = brownLineInfo[station].zip;
+        } else if (trainchoice == "g") {
+            zipCode = greenLineInfo[station].zip;
         }
         apiAndTextMaker();
     }
