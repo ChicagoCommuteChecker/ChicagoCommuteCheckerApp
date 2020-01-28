@@ -1,4 +1,4 @@
-// The object below contains data for the Blue Line related to a feature currently in development which will allow users to select a specific station they use.
+// This file contains station data for the train lines. We use this data to generate the pulldown menu from which users select a station. We then use the ZIP code of that station to get weather data.
 
 var blueLineInfo = [
     {
@@ -914,12 +914,6 @@ var purpleLineInfo = [
         name: "Belmont",
         zip: "60657",
         stationID: 41320,
-        ada: "accessible"
-    },
-    {
-        name: "Wellington",
-        zip: "60657",
-        stationID: 41210,
         ada: "accessible"
     },
     {
