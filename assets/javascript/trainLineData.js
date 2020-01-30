@@ -1007,3 +1007,159 @@ var purpleLineInfo = [
         ada: "accessible"
     },
 ];
+
+var pinkLineInfo = [
+    {
+        name: "54th/Cermak",
+        zip: "60804",
+        stationID: 40580,
+        ada: "accessible"
+    },
+    {
+        name: "Cicero",
+        zip: "60804",
+        stationID: 41420,
+        ada: "accessible"
+    },
+    {
+        name: "Kostner",
+        zip: "60623",
+        stationID: 40600,
+        ada: "accessible"
+    },
+    {
+        name: "Pulaski",
+        zip: "60623",
+        stationID: 40150,
+        ada: "accessible"
+    },
+    {
+        name: "Central Park",
+        zip: "60623",
+        stationID: 40780,
+        ada: "accessible"
+    },
+    {
+        name: "Kedzie",
+        zip: "60623",
+        stationID: 41040,
+        ada: "accessible"
+    },
+    {
+        name: "California",
+        zip: "60608",
+        stationID: 40440,
+        ada: "accessible"
+    },
+    {
+        name: "Western",
+        zip: "60608",
+        stationID: 40740,
+        ada: "accessible"
+    },
+    {
+        name: "Damen",
+        zip: "60608",
+        stationID: 40210,
+        ada: "accessible"
+    },
+    {
+        name: "18th",
+        zip: "60608",
+        stationID: 40830,
+        ada: "accessible"
+    },
+    {
+        name: "Polk",
+        zip: "60612",
+        stationID: 41030,
+        ada: "accessible"
+    },
+    {
+        name: "Ashland",
+        zip: "60612",
+        stationID: 40170,
+        ada: "accessible"
+    },
+    {
+        name: "Morgan",
+        zip: "60607",
+        stationID: 41510,
+        ada: "accessible"
+    },
+    {
+        name: "Clinton",
+        zip: "60661",
+        stationID: 41160,
+        ada: "accessible"
+    },
+    {
+        name: "Clark/Lake",
+        zip: "60601",
+        stationID: 40380,
+        ada: "accessible"
+    },
+    {
+        name: "State/Lake",
+        zip: "60601",
+        stationID: 40260,
+        ada: "NOT accessible"
+    },
+    {
+        name: "Washington/Wabash",
+        zip: "60602",
+        stationID: 41700,
+        ada: "accessible"
+    },
+    {
+        name: "Adams/Wabash",
+        zip: "60603",
+        stationID: 40680,
+        ada: "NOT accessible"
+    },
+    {
+        name: "Harold Washington Library-State/Van Buren",
+        zip: "60604",
+        stationID: 40850,
+        ada: "accessible"
+    },
+    {
+        name: "LaSalle/Van Buren",
+        zip: "60605",
+        stationID: 40160,
+        ada: "NOT accessible"
+    },
+    {
+        name: "Quincy",
+        zip: "60606",
+        stationID: 40040,
+        ada: "accessible"
+    },
+    {
+        name: "Washington/Wells",
+        zip: "60606",
+        stationID: 40730,
+        ada: "accessible"
+    },
+];
+
+var yellowLineInfo = [
+    {
+        name: "Dempster-Skokie",
+        zip: "60077",
+        stationID: 40140,
+        ada: "accessible"
+    },
+    {
+        name: "Oakton-Skokie",
+        zip: "60076",
+        stationID: 41680,
+        ada: "accessible"
+    },
+    {
+        name: "Howard",
+        zip: "60623",
+        stationID: 40900,
+        ada: "accessible"
+    },
+];
