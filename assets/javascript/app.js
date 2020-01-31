@@ -68,9 +68,9 @@ $("#trainmenu").on("change", function (event) {
     }
     $("#station-submit").removeClass("hide");
     $("#stationmenu").removeClass("hide");
-    if ($("#train-submit").attr("class") != "hide") {
-        $("#train-submit").addClass("hide");
-    }
+    // if ($("#train-submit").attr("class") != "hide") {
+    //     $("#train-submit").addClass("hide");
+    // }
     // if (trainchoice == "blue") {
     //     PullDown(blueLineInfo);
     //     $("#station-submit").removeClass("hide");
@@ -134,23 +134,48 @@ $(".submitButton").on("click", function (event) {
     //     // console.log(zipCode);
     //     apiAndTextMaker();
     // } else {
-        var station = $("#stationmenu").val().toString();
-        trainchoice = $("#trainmenu").val();
-        if (trainchoice == "blue") {
+    var station = $("#stationmenu").val().toString();
+    trainchoice = $("#trainmenu").val();
+    switch (trainchoice) {
+        case "blue":
             zipCode = blueLineInfo[station].zip;
-        } else if (trainchoice == "red") {
+            break;
+        case "red":
             zipCode = redLineInfo[station].zip;
-        } else if (trainchoice == "org") {
+            break;
+        case "org":
             zipCode = orangeLineInfo[station].zip;
-        } else if (trainchoice == "brn") {
+            break;
+        case "brn":
             zipCode = brownLineInfo[station].zip;
-        } else if (trainchoice == "g") {
+            break;
+        case "g":
             zipCode = greenLineInfo[station].zip;
-        } else if (trainchoice == "p") {
+            break;
+        case "p":
             zipCode = purpleLineInfo[station].zip;
-        }
-        apiAndTextMaker();
+            break;
+        case "pink":
+            zipCode = pinkLineInfo[station].zip;
+            break;
+        case "y":
+            zipCode = yellowLineInfo[station].zip;
+            break;
     }
+    // if (trainchoice == "blue") {
+    //     zipCode = blueLineInfo[station].zip;
+    // } else if (trainchoice == "red") {
+    //     zipCode = redLineInfo[station].zip;
+    // } else if (trainchoice == "org") {
+    //     zipCode = orangeLineInfo[station].zip;
+    // } else if (trainchoice == "brn") {
+    //     zipCode = brownLineInfo[station].zip;
+    // } else if (trainchoice == "g") {
+    //     zipCode = greenLineInfo[station].zip;
+    // } else if (trainchoice == "p") {
+    //     zipCode = purpleLineInfo[station].zip;
+    // }
+    apiAndTextMaker();
 });
 
 function apiAndTextMaker() {
