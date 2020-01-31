@@ -40,69 +40,100 @@ function PullDown(array) {
 $("#trainmenu").on("change", function (event) {
     event.preventDefault();
     trainchoice = $("#trainmenu").val();
-    if (trainchoice == "blue") {
-        PullDown(blueLineInfo);
-        $("#station-submit").removeClass("hide");
-        $("#stationmenu").removeClass("hide");
-        if ($("#train-submit").attr("class") != "hide") {
-            $("#train-submit").addClass("hide");
-        }
-    } else if (trainchoice == "red") {
-        PullDown(redLineInfo);
-        $("#station-submit").removeClass("hide");
-        $("#stationmenu").removeClass("hide");
-        if ($("#train-submit").attr("class") != "hide") {
-            $("#train-submit").addClass("hide");
-        }
-    } else if (trainchoice == "org") {
-        PullDown(orangeLineInfo);
-        $("#station-submit").removeClass("hide");
-        $("#stationmenu").removeClass("hide");
-        if ($("#train-submit").attr("class") != "hide") {
-            $("#train-submit").addClass("hide");
-        }
-    } else if (trainchoice == "brn") {
-        PullDown(brownLineInfo);
-        $("#station-submit").removeClass("hide");
-        $("#stationmenu").removeClass("hide");
-        if ($("#train-submit").attr("class") != "hide") {
-            $("#train-submit").addClass("hide");
-        }
-    } else if (trainchoice == "g") {
-        PullDown(greenLineInfo);
-        $("#station-submit").removeClass("hide");
-        $("#stationmenu").removeClass("hide");
-        if ($("#train-submit").attr("class") != "hide") {
-            $("#train-submit").addClass("hide");
-        }
-    } else if (trainchoice == "p") {
-        PullDown(purpleLineInfo);
-        $("#station-submit").removeClass("hide");
-        $("#stationmenu").removeClass("hide");
-        if ($("#train-submit").attr("class") != "hide") {
-            $("#train-submit").addClass("hide");
-        }
-    } else {
-        $("#train-submit").removeClass("hide");
-        if ($("#station-submit").attr("class") != "hide") {
-            $("#station-submit").addClass("hide");
-        }
-        if ($("#stationmenu").attr("class") != "hide") {
-            $("#stationmenu").addClass("hide");
-        }
+    switch (trainchoice) {
+        case "blue":
+            PullDown(blueLineInfo);
+            break;
+        case "red":
+            PullDown(redLineInfo);
+            break;
+        case "org":
+            PullDown(orangeLineInfo);
+            break;
+        case "brn":
+            PullDown(brownLineInfo);
+            break;
+        case "g":
+            PullDown(greenLineInfo);
+            break;
+        case "p":
+            PullDown(purpleLineInfo);
+            break;
+        case "pink":
+            PullDown(pinkLineInfo);
+            break;
+        case "y":
+            PullDown(yellowLineInfo);
+            break;
     }
+    $("#station-submit").removeClass("hide");
+    $("#stationmenu").removeClass("hide");
+    if ($("#train-submit").attr("class") != "hide") {
+        $("#train-submit").addClass("hide");
+    }
+    // if (trainchoice == "blue") {
+    //     PullDown(blueLineInfo);
+    //     $("#station-submit").removeClass("hide");
+    //     $("#stationmenu").removeClass("hide");
+    //     if ($("#train-submit").attr("class") != "hide") {
+    //         $("#train-submit").addClass("hide");
+    //     }
+    // } else if (trainchoice == "red") {
+    //     PullDown(redLineInfo);
+    //     $("#station-submit").removeClass("hide");
+    //     $("#stationmenu").removeClass("hide");
+    //     if ($("#train-submit").attr("class") != "hide") {
+    //         $("#train-submit").addClass("hide");
+    //     }
+    // } else if (trainchoice == "org") {
+    //     PullDown(orangeLineInfo);
+    //     $("#station-submit").removeClass("hide");
+    //     $("#stationmenu").removeClass("hide");
+    //     if ($("#train-submit").attr("class") != "hide") {
+    //         $("#train-submit").addClass("hide");
+    //     }
+    // } else if (trainchoice == "brn") {
+    //     PullDown(brownLineInfo);
+    //     $("#station-submit").removeClass("hide");
+    //     $("#stationmenu").removeClass("hide");
+    //     if ($("#train-submit").attr("class") != "hide") {
+    //         $("#train-submit").addClass("hide");
+    //     }
+    // } else if (trainchoice == "g") {
+    //     PullDown(greenLineInfo);
+    //     $("#station-submit").removeClass("hide");
+    //     $("#stationmenu").removeClass("hide");
+    //     if ($("#train-submit").attr("class") != "hide") {
+    //         $("#train-submit").addClass("hide");
+    //     }
+    // } else if (trainchoice == "p") {
+    //     PullDown(purpleLineInfo);
+    //     $("#station-submit").removeClass("hide");
+    //     $("#stationmenu").removeClass("hide");
+    //     if ($("#train-submit").attr("class") != "hide") {
+    //         $("#train-submit").addClass("hide");
+    //     }
+    // } else {
+    //     $("#train-submit").removeClass("hide");
+    //     if ($("#station-submit").attr("class") != "hide") {
+    //         $("#station-submit").addClass("hide");
+    //     }
+    //     if ($("#stationmenu").attr("class") != "hide") {
+    //         $("#stationmenu").addClass("hide");
+    //     }
+    // }
 })
 
 $(".submitButton").on("click", function (event) {
     event.preventDefault();
     // console.log(this);
-    var whichButton = ($(this).attr("id"));
-    if (whichButton === "standardSubmit") {
-        zipCode = $("#inputFormID").val().trim();
-        trainchoice = $("#trainmenu").val();
-        // console.log(zipCode);
-        apiAndTextMaker();
-    } else {
+    // var whichButton = ($(this).attr("id"));
+    // if (whichButton === "standardSubmit") {
+    //     zipCode = $("#inputFormID").val().trim();
+    //     trainchoice = $("#trainmenu").val();
+    //     // console.log(zipCode);
+    //     apiAndTextMaker();
+    // } else {
         var station = $("#stationmenu").val().toString();
         trainchoice = $("#trainmenu").val();
         if (trainchoice == "blue") {
