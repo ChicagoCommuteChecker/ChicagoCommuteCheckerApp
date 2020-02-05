@@ -10,9 +10,9 @@ This project utilized three different APIs: Current Weather Data, 5 Day Forecast
 
 How our App works
 
-1. Select your Train Line.
+1. Select your train line.
 
-2. Enter your Zipcode (Chicago CTA Zipcodes only!)
+2. Pick your train station.
 
 3. Relax! We're processing your commute conditions.
 
@@ -33,4 +33,3 @@ HTML5<br>
 CSS3<br>
 Javascript<br>
 API's<br>
-
